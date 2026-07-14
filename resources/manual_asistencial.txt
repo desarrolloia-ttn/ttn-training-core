@@ -1,0 +1,275 @@
+GUÍA DE USO BIOWEL ASISTENCIAL
+4 de junio de 2026
+
+Índice
+
+1 Objetivo
+
+3
+
+2 Acceso al sistema
+
+3
+
+3 Requisitos previos
+
+3
+
+4 Agendamiento de una cita
+
+3
+
+4.1 Creación de una agenda . . . . . . . . . . . . . . . . . . . . . . . 3
+
+4.2 Registro de un paciente . . . . . . . . . . . . . . . . . . . . . . . 5
+
+4.3 Programación de una cita . . . . . . . . . . . . . . . . . . . . . . 6
+
+5 Admisión
+
+8
+
+5.1 Admisión de una cita . . . . . . . . . . . . . . . . . . . . . . . . 8
+
+5.2 Atención de un paciente . . . . . . . . . . . . . . . . . . . . . . . 9
+
+6 Ordenamiento
+
+11
+
+6.1 Medicamentos . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12
+
+6.2 Combos de medicamentos . . . . . . . . . . . . . . . . . . . . . 12
+
+6.3 Servicios . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+
+6.4 Combos de servicios . . . . . . . . . . . . . . . . . . . . . . . . 13
+
+6.5 Referencia . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14
+
+6.6 Certificado de asistencia . . . . . . . . . . . . . . . . . . . . . . 14
+
+6.7 Incapacidad . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14
+
+7 Dispensación
+
+15
+
+7.1 Dispensación de medicamentos . . . . . . . . . . . . . . . . . . . 15
+
+1. Objetivo
+2. Acceso al sistema
+Ingresar a través del enlace Biowel aquí. Iniciar sesión con tus credenciales (usuario y contraseña). Al ingresar por primera vez se debe seleccionar una cuenta (empresa) y el rol.
+3. Requisitos previos
+1. Registro de motivos de anulación 2. Configuración de servicios 3. Registro de
+4. Agendamiento de una cita
+4.1. Creación de una agenda
+1. El primer paso es ingresar al ((Módulo Asistencial)), en el submódulo ”tm de atención de citas”. Una vez ahí nos dirigimos al apartado .asignación de recursos”. Este apartado es para la creación de un consultorio o quirófano.
+2. Al dar clic en la opción agregar consultorio, se deben llenar los campos obligatorios. Relacionar una sede Definir el tipo de recurso (consultorio, quirófano y virtual) Seleccionar los tipos de servicios que se van a atender en ese consultorio. Asociar el centro de consumo Registrar la disponibilidad que va a tener ese consultorio. Muy importante está disponibilidad para la creación de la agenda.
+
+3. Con el paso anterior realizado, nos dirigimos al apartado c¸onfiguración de agendas”, en él submódulo de ”tm de atención de citas”.
+4. Encontraremos un campo de lista desplegable para seleccionar los médicos, al seleccionar un médico, se visualizará con un calendario (aquí se mostrarán los días agendados de ese médico) y una opción con símbolo de suma en un pequeño recuadro llamado agendas para agregar nuevas agendas.
+5. Al dar clic en nueva agenda, se abrirá la pantalla para el registro de una nueva agenda. Se deben registrar los siguientes campos obligatorios.
+6. Registrar un nombre a la agenda en el campo correspondiente, agregar una pequeña descripción, seleccionar un color para distinguir el agendamiento de ese médico y Al agregar día.
+7. Seleccionada la opción anterior se mostrará una pequeña ventana con una opción de lista desplegable para seleccionar un día de la semana, seleccionado el día, presione la opción .aceptar”. Donde se mostrarán las siguientes secciones con campos obligatorios a registrar.
+a) Horario
+1) Registrar la hora de inicio y hora fin en la que estará disponible la agenda.
+2) Seleccionar la sede donde estará vigente dicha agenda.
+3) Seleccionar el tipo (consultorio, quirófano, virtual).
+4) Seleccionar el lugar, se listarán los consultorios creados previamente.
+5) Opcionalmente se elige un ayudante.
+6) Se debe marcar la opción de cupos adicionales e ingresar un valor numérico.
+b) Servicios relacionados
+1) Al dar clic en .agregar servicios”, se abrirá una pequeña ventana que listarán los servicios.
+2) Se deben marcar los servicios que se gestionarán en está agenda y dar clic en el botón .aceptar”.
+
+2
+
+3) Estos se mostrarán con una opción para desplegar y ver el detalle del servicio y poder removerlo.
+c) Grupos de atención 1) Se debe ingresar un valor numérico en el campo de pos.
+8. Al guardar y seleccionando al médico se podrá visualizar la agenda anterior registrada.
+4.2. Registro de un paciente
+1. Al ingresar al ”Módulo Citas.en el submódulo registro de citas”, ingresando en el apartado registrar al dar clic en la opción I¨nscribir nuevo paciente”. Se accederá a una pantalla donde se mostrarán los campos obligatorios para el registro de un paciente.
+2. Se deben llenar los campos obligatorios de la información básica del paciente como: Tipo de documento Número de documento Primer nombre Primer apellido Fecha de nacimiento Whatsapp Género Tipo de afiliación
+3. Registro de información complementaria como ciudad, dirección, etc. Donde el único campo obligatorio es el número celular.
+4. Se deben completar los campos de la sección aseguradora obligatoria como: Seleccionamos una empresa de seguros en el campo seguro. Al seleccionar la empresa, en la lista desplegable de plan se mostrarán los planes de dicha empresa seleccionada, al elegir una opción au-
+
+tomáticamente se completarán los campos de población y grupo de ingreso. Es opcional agregar un número de póliza.
+Existe la opción para para agregar una aseguradora voluntaria en el caso que se requiera añadir para el registro de un paciente.
+5. Al completar el registro del paciente, este se mostrará en la pantalla de registro de citas.
+4.3. Programación de una cita
+1. En el ”módulo citas”, en el submódulo registro de citas”, ingresamos en el apartado registrar”.
+2. Se listarán los pacientes que se registraron previamente, se mostrará un campo de búsqueda para los pacientes y una opción para inscribir nuevos pacientes.
+3. Al dar clic sobre un paciente, se mostrará una ventana con los campos obligatorios para la programación de su cita.
+Se selecciona la aseguradora y automáticamente se completará el campo plan contrato.
+Se debe seleccionar el tipo de servicio para habilitar el campo ubicació n.
+Al seleccionar una ubicación, en el campo sede se mostrarán las sedes asociadas a esa ciudad.
+elija al médico.
+En el campo fecha de inicio por defecto mostrará la fecha del día actual.
+Selecciona el día de la semana en la que se programará la cita, se debe marcar el rango de hora (am o pm) y dar clic en el icono con forma de lupa para buscar las agendas disponibles del médico cercanas a la fecha de inicio.
+Se visualizarán los horarios indicando las horas en la que el médico está disponible, se le debe dar clic en añadir y registrar una anotación para luego guardar la programación de la cita.
+
+Se mostrará una pequeña ventana para poder visualizar el recordatorio, al dar clic, se abrirá la pantalla para enviar el recordatorio de la cita al correo del paciente.
+4. Se podrá realizar una solicitud de descuento, en el ”submódulo descuento”, ingresando al apartado ”solicitar descuento”. Se mostrará una opción llamada seleccionar cita, ubicada en la parte inferior del titulo de la pantalla.
+5. Al dar clic se mostrarán las citas pendientes por admitir con su respectiva fecha de atención. Selecciona una cita y se auto llenarán los campos de la pantalla solicitud de descuento.
+6. Se debe seleccionar el tipo de descuento (porcentaje o valor), se registra un valor numérico, se debe seleccionar un motivo de descuento y agregar una descripción en el campo de comentarios.
+7. Una vez registrada la solicitud de descuento, debemos ingresar al apartado .aprobar descuento”, aquí se mostrarán las solicitudes de descuentos en estado pendiente y se visualizarán campos específicos para establecer los filtros según la búsqueda de solicitudes como las fechas de solicitud.
+8. Las solicitudes en estado pendiente, tendrán dos botones para aceptar o rechazar la solicitud.
+Al rechazar la solicitud se habilitará un pequeño campo para agregar un comentario como motivo de rechazo y actualizará sus estado a rechazado.
+Al aceptar la solicitud, actualizará su estado a aprobado.
+9. Ingresando al apartado c¸onsulta de citas”, en el ”submódulo registro de citas”, se listarán todas las citas del día vigente, para mostrar el histórico de las citas o consultar las citas futuras se debe filtrar por los campos de fecha de atención.
+10. Aquí se podrán gestionar las citas con las diferentes opciones como:
+Anular
+Al seleccionar está opción, se mostrará una ventana para seleccionar el motivo de anulación de la cita.
+Reprogramar
+
+Está opción mostrará una ventana para seleccionar los campos ubicación, sede y médico. Al llenar los campos anteriores se da clic en el icono con lupa, para consultar la fecha, los médicos disponibles y seleccionar la hora de la nueva reprogramación.
+Confirmar
+Está opción actualizará el estado de la cita a c¸ita programada”.
+5. Admisión
+5.1. Admisión de una cita
+1. Se ingresa al ”módulo de admisión”, seleccionar la sede, luego ingresamos en el ”submódulo admisiones”, en el apartado .admitir pacientes”.
+2. Aquí se listarán las citas del día vigente, puede consultarse las citas futuras y pasadas por medio del campo de fecha, únicamente se podrán admitir las citas del día actual. Al marcar las citas en el check y luego hacer clic en el botón admitir paciente. Se mostrará las siguientes secciones:
+Información básica
+Aquí se podrá visualizar y editar la información personal del paciente, su información de contacto e información de residencia.
+Información adicional
+En está sección se mostrará la información de su aseguradora obligatoria, aseguradora voluntaria, grupo sanguíneo, estado civil e información del acompañante.
+Recaudo
+Aquí se mostrará la información del valor a pagar, saldo a favor, saldo pendiente, el tipo de recaudo y el valor a recaudar. Se cuenta con un campo para la entrega del vuelto y otro campo para donar el vuelto. Incluye la opción para agregar servicios complementarios.
+3. Al verificar los datos y guardar la admisión del paciente. Se podrá previsualizar su factura electrónica.
+
+4. Se deben revisar los saldos de los pacientes admitidos, ya que pueden tener saldos a favor y estos deben ser devueltos. Para realizar lo siguiente, debemos dirigirnos al ”submódulo clientes pacientes”, y en el apartado ”devueltas”se listarán los pacientes con estado pendiente por saldo, a favor, al ingresar al detalle de los pacientes se mostrarán todos sus saldos a favor en una vista detallada por fecha, tipo y monto.
+5. Se marca la fila de vueltos pendientes y luego se hace clic en .entregar devuelta”. Este cambiará su estado a entregado.
+5.2. Atención de un paciente
+1. Se debe ingresar al sistema con un usuario en el rol de médico.
+2. Una vez se haya iniciado sesión se debe ingresar al ”Módulo historia clínica”, al ”submódulo atención de pacientes”, en el apartado c¸onsulta”(debido a que es una cita de tipo consulta).
+3. Se listarán todos los pacientes que hayan sido admitidos. Aquellos pacientes que están disponibles por pago no podrán ser atendidos.
+4. Al atender el paciente se mostrará una pantalla con detalles para su atención. En la parte superior se podrá visualizar datos del paciente, un cronometro contabilizando el tiempo de la atención y una lista desplegable para completar y añadir información en la historia clínica con las siguientes opciones:
+Preconsulta
+• Se debe llenar la lista desplegable de origen de la atención, en caso de que haya un evento adverso se marca la opción y se registra el tiempo de evolución.
+• Se agregan textos predefinidos en los motivos de consulta y el campo enfermedad actual.
+• Se visualiza una sección de examen físico / ocular. El cual organiza OD y OI en columnas con secciones como Externo, P/P/L (párpados, pestañas y lagrimal), Conjuntiva/Esclera, Córnea, Cámara anterior, Iris, Cristalino, Retina/Vítreo, Nervio óptico, Pupilometría, Gonioscopía y Campo visual, más Observaciones; cada campo tiene un check “Normal” y puedes escribir hallazgos cuando no es
+
+normal; en la parte superior de la sección hay atajos para cargar el examen previo y para marcar examen normal en ambos ojos.
+• En la sección impresión diagnostica ampliada. Arriba eliges el diagnóstico (CIE-10) en el combo, marcas la lateralidad (OD/OI/AO) y con el + lo agregas a la tabla. La grilla muestra Fecha, CIE-10, nombre del diagnóstico, Ojo, MD (código interno), Estado (Pendiente, crónico, resuelto, transitorio) y la columna DX donde marcas el diagnóstico principal (el ícono azul). Abajo, Tiempo de evolución DX registra cantidad y unidad (días/semanas/meses/años). Flujo sugerido: seleccionar CIE-10 → escoger OD/OI/AO → agregar → definir Estado y marcar DX principal → completar tiempo de evolución.
+• En la sección análisis y plan. Es el campo de texto libre para documentar el razonamiento clínico (Análisis) y la conducta a seguir (Plan) de la consulta.
+Dilatació n
+Signos vitales
+• La pestaña Signos vitales permite registrar la tensión arterial (sistólica/diastólica, mmHg), la frecuencia cardiaca (LPM), la frecuencia respiratoria (RPM), la temperatura (°C), el peso corporal (kg) y la estatura (cm), además de anotar observaciones en Notas.
+Tamizaje ocular
+• Contamos con campos para la toma de visión y registro de la paquimetría para el OD y OI.
+• Se cuenta con campos para adjuntar fotos del segmento anterior, OCT de retina y OCT del nervio óptico por cada ojo y poder previsualizarlas.
+• Cuenta con con una sección campo visual por confrontación y poder agregar una observación por cada ojo.
+Conciliación medicamentosa
+Ortó ptica
+
+La pestaña reune todo lo necesario para el registro de resultados o mediciones en sus diferentes campos de las siguientes secciones:
+• Fórmula final de optometría funcional • Amplitudes fusionales • Fijación • Reflejo de Hirschberg • Test de Krimsky • Prisma cover test • White test • Versiones • Test de Bielschowsky • Punto próximo de convergencia (PPC) • Flexibilidad de acomodación • Lateralidad • Amplitud de acomodación • Visión cromática • Correspondencia sensorial • Estereopsis 5. Por ultimo tendremos la opción para finalizar la atención u ordenarlos.
+6. Ordenamiento
+1. Podremos ordenar un paciente, sin importar si finalizo su atención. Este evento puede realizarse durante el día en curso a la atención.
+2. Se puede realizar el ordenamiento por dos rutas: Ingresando al ”Módulo historia clínica”, en el ”submódulo atención de pacientes”, en el apartado consulta. Se filtra por las atenciones
+
+pendientes o atendidas durante el día en curso, ingresando al detalle de estás, donde nos dirigirá al detalle de la atención y en la parte inferior derecha dar clic en ir a ordenamiento.
+Otra ruta es ingresando al ”Módulo de ordenamientos”, en el ”submódulo ordenes”, en el apartado .ordenar”. Aquí se debe buscar al paciente por en número de identificación, donde se listarán sus eventos activos y seleccionando el evento se abrirá la pantalla para poder ordenar.
+6.1. Medicamentos
+1. En la pestaña de medicamento, tendremos un filtro avanzado para una búsqueda mas precisa a un medicamento en especifico.
+En este filtro podremos buscar por palabras clave, presentación, diagnósticos.
+También poder organizar los medicamentos marcando los siguientes campos; fecha de creación, frecuencia de uso, orden alfabético.
+Una vez se haya filtrado por el medicamento, se debe seleccionar el medicamento dando clic en este, para luego presionar la opción seleccionar.
+2. Se debe seleccionar el tipo orden (particular, aseguradora y sugerencia), luego seleccionar el medicamento en la lista desplegable o utilizando la búsqueda avanzada.
+3. Se procede a registrar los campos cantidad, llenar los campos de tiempo para cada uso, el periodo, la vía de administración (al seleccionar oftálmico se debe seleccionar un órgano oi, od) y agregar una observación de instrucciones al paciente. El botón flotante naranja agrega la orden al plan.
+4. Al dar clic al botón ordenar, redirigirá a una pantalla para previsualización de la orden e imprimirla.
+6.2. Combos de medicamentos
+1. En la pestaña combos de medicamentos, se encuentra una lista desplegable para seleccionar los combos de medicamentos.
+
+2. Una vez seleccionado el combo, se mostrarán los medicamentos que hacen parte de ese combo, junto a la información de las dosis, frecuencia, duración, cantidad, vía, ojo (dependerá de la vía) y una observación.
+3. Se incluye un campo de texto para registrar una observación general del paciente o del tratamiento.
+6.3. Servicios
+1. Se mostrarán dos opciones para de ordenes a realizar; consultas y/o ayudas diagnósticas y procedimientos y/o cirugía. Al seleccionar una opción.
+2. Se mostrará un campo para seleccionar un motivo por el cual se origina el ordenamiento del servicio. Al seleccionar una opción se desplegará un pequeño recuadro con campos a diligenciar. Tipo de orden Se selecciona el servicio Se define que el ojo (oi, ao, od) La duración del servicio La programación del servicio El botón flotante naranaja agrega el servicio para el ordenamiento
+3. Se incluye un campo de texto para registrar una observación general del paciente o del servicio ordenado.
+6.4. Combos de servicios
+1. Se mostrarán dos opciones para de ordenes a realizar; consultas y/o ayudas diagnósticas y procedimientos y/o cirugía. Al seleccionar una opción.
+2. Se mostrará un campo para seleccionar un motivo por el cual se origina el ordenamiento del servicio.
+3. Se deben completar los campos tipo de orden (como aseguradora o particular), el ojo a intervenir (AO, OD u OI), y seleccionar el combo del servicio específico.
+
+4. Se incluye un campo de texto para registrar una observación general del paciente o del combo de servicio ordenado.
+6.5. Referencia
+1. En la parte de Referencia, el profesional de la salud puede registrar el tipo (por ejemplo, hospitalización), el motivo de la remisión, el plan de referencia (acciones previstas en la institución receptora) y la expectativa (objetivo o resultado esperado con la remisión).
+2. En la sección de Contrarreferencia, se documenta la información de la persona e institución que acepta la remisión, incluyendo datos como nombre, cargo, celular y hora de aceptación.
+3. Se generará un documento donde se ofrecen opciones de impresión, así como botones para regresar o finalizar el proceso.
+6.6. Certificado de asistencia
+1. En este documento digital certifica que el paciente remitido efectivamente acudió a la institución diligenciando el campo de fecha.
+2. Se debe incluir observaciones adicionales, y se valida con la firma digital del médico junto a su nombre.
+3. Se generará un documento donde se ofrecen opciones de impresión, así como botones para regresar o finalizar el proceso.
+6.7. Incapacidad
+1. Aquí se puede registrar la información asociada a una incapacidad otorgada al paciente.
+2. Incluye campos para ingresar el número de días de incapacidad, la fecha de inicio y la fecha de fin, así como un espacio para añadir observaciones relevantes.
+3. Finalmente, el documento se valida con la firma digital del médico y su identificación como responsable.
+
+4. Se generará un documento donde se ofrecen opciones de impresión, así como botones para regresar o finalizar el proceso.
+7. Dispensación
+7.1. Dispensación de medicamentos
+1. Se debe ingresar al ”Módulo dispensación”, se listarán las sedes previamente relacionadas al usuario, al seleccionar la sede, diríjase al ”submódulo entrega de medicamentos.eingrese a su apartado.
+2. Se listarán los pacientes y se visualizarán dos filtros; Un campo de búsqueda por nombre y número de documento del paciente. Un campo de lista desplegable de aseguradora que mostrará los pacientes asociados por aseguradora.
+3. Al seleccionar un paciente, se mostrarán sus ordenes de medicamentos pendientes o entregadas y una opción en la parte superior llamada ”dispensar por venta libre”.
+Dispensar por venta libre
+Al ingresar por está opción se abrirá una pantalla con información del paciente.
+Por este medio se podrá dispensar medicamentos al paciente que no se encuentran en una orden.
+Se mostrará una opción en la parte inferior de la sección: escanear medicamentos.
+Escanear medicamentos
+En está opción se abrirá un pequeño cuadro con un campo para ingresar el código de barra del medicamento, al llenar el campo se mostrará la información de ese medicamento y el campo de la cantidad que se entregará al paciente.
+Se visualizará un botón con forma de un ojo en la parte superior derecha de la sección, al dar clic se podrá visualizar el documento soporte de la formulación de medicamentos.
+
+En la sección registro de entrega, se completan los campos de la persona que recibe la dispensación de medicamentos. Adjuntando una fotografía de su rostro, fotografía del documento de identificación, se registra su tipo de documento, número de documento, nombre y una firma.
+en la parte superior derecha de la sección se visualizará una opción para cargar los documentos soportes para la dispensación (estos serán parametrizados desde, el submódulo configuración, en parametrización de soportes).
+Como último paso se da clic en la opción establecer entrega para dispensar los medicamentos.
+4. Al dar clic en una orden pendiente se visualizarán dos opciones de entrega:
+Aseguradora
+Al ingresar por está opción se abrirá una pantalla con información del paciente.
+En la sección de medicamentos a entregar, se visualizará la cantidad de medicamentos entregados y las entregas aún pendientes.
+Por este medio no se hace una entrega completa de los medicamentos cuando estos están formulados para un uso mayor a un mes, por disposición de la aseguradora se realizan de forma parcial.
+Habrán dos botones en la parte inferior de la sección: Solicitar entrega completa, escanear medicamentos.
+Solicitar entrega completa
+Al dar clic en esta opción se abrirá un pequeño formulario con la información del paciente, se valida la información, se ingresa una pequeña descripción en el campo motivo y se envía la solicitud.
+Escanear medicamentos
+En está opción se abrirá un pequeño cuadro con un campo para ingresar el código de barra del medicamento, al llenar el campo se mostrará la información de ese medicamento y el campo de la cantidad que se entregará al paciente.
+
+Se visualizará un botón con forma de un ojo en la parte superior derecha de la sección, al dar clic se podrá visualizar el documento soporte de la formulación de medicamentos.
+En la sección registro de entrega, se completan los campos de la persona que recibe la dispensación de medicamentos. Adjuntando una fotografía de su rostro, fotografía del documento de identificación, se registra su tipo de documento, número de documento, nombre y una firma.
+en la parte superior derecha de la sección se visualizará una opción para cargar los documentos soportes para la dispensación (estos serán parametrizados desde, el submódulo configuración, en parametrización de soportes).
+Como último paso se da clic en la opción establecer entrega para dispensar los medicamentos.
+Venta libre
+Al ingresar por está opción se abrirá una pantalla con información del paciente.
+Por este medio de entrega se puede realizar una entrega completa de los medicamentos debido a que estos son facturados al paciente directamente.
+Se mostrará una opción en la parte inferior de la sección: escanear medicamentos.
+Escanear medicamentos
+En está opción se abrirá un pequeño cuadro con un campo para ingresar el código de barra del medicamento, al llenar el campo se mostrará la información de ese medicamento y el campo de la cantidad que se entregará al paciente.
+Se visualizará un botón con forma de un ojo en la parte superior derecha de la sección, al dar clic se podrá visualizar el documento soporte de la formulación de medicamentos.
+En la sección registro de entrega, se completan los campos de la persona que recibe la dispensación de medicamentos. Adjuntando una
+
+fotografía de su rostro, fotografía del documento de identificación, se registra su tipo de documento, número de documento, nombre y una firma.
+en la parte superior derecha de la sección se visualizará una opción para cargar los documentos soportes para la dispensación (estos serán parametrizados desde, el submódulo configuración, en parametrización de soportes).
+Como último paso se da clic en la opción establecer entrega para dispensar los medicamentos.
+5. Aquellas solicitudes realizadas de entrega completa, quedarán en estado pendiente, hasta que sean rechazadas o aprobadas y se podrán visualizar en el ”submódulo autorizar entrega completa”, en el apartado ”solicitudes de entrega completa”.
+6. Contarán con filtros por fechas, estados, nombre y número de documento del paciente.
+Cuentas
+
+Administración Usuarios
+
+Sedes
+
+Manual BIOWEL PRO
+
+Facturació n
+
+Servicios Manual tarifario
+
+Cuentas Médicas Contratos
+
+Asistencial
+
+Recursos Medicamentos
+
+Anexo 1
+

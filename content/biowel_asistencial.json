@@ -1,0 +1,615 @@
+{
+  "product": "biowel",
+  "moduleId": 2,
+  "code": "MÓDULO 2 · ASISTENCIAL",
+  "title": "Asistencial",
+  "description": "Flujo asistencial de Biowel PRO: agendamiento de citas, admisión y atención del paciente (historia clínica electrónica) y ordenamiento clínico. Basado en la Guía de uso Biowel Asistencial.",
+  "source": "Guía de uso Biowel Asistencial (Manual BIOWEL PRO)",
+  "scope": "Bloques 0 a 3 (Introducción, Agendamiento, Admisión y atención, Ordenamiento). La Dispensación se cubre en el Módulo 4.",
+  "prerequisites": [
+    "Registro de motivos de anulación",
+    "Configuración de servicios",
+    "Registro de recursos y sedes en el módulo de Administración"
+  ],
+  "blocks": [
+    {
+      "id": "b0",
+      "title": "Bloque 0 · Introducción y acceso",
+      "lessons": [
+        {
+          "id": "l0-1",
+          "code": "L1",
+          "title": "Objetivo del módulo y acceso al sistema",
+          "duration": "5:00",
+          "summary": "Qué cubre el módulo Asistencial de Biowel y cómo ingresar por primera vez seleccionando cuenta y rol.",
+          "objectives": [
+            "Reconocer el alcance del flujo asistencial: agendar, admitir, atender y ordenar.",
+            "Ingresar al sistema con credenciales y seleccionar la cuenta (empresa) y el rol."
+          ],
+          "sections": [
+            {
+              "heading": "Acceso al sistema",
+              "steps": [
+                "Ingresar a través del enlace de Biowel.",
+                "Iniciar sesión con tus credenciales (usuario y contraseña).",
+                "Al ingresar por primera vez, seleccionar una cuenta (empresa) y el rol con el que vas a trabajar."
+              ]
+            },
+            {
+              "heading": "Requisitos previos",
+              "steps": [
+                "Tener registrados los motivos de anulación.",
+                "Tener configurados los servicios.",
+                "Contar con el registro de recursos, sedes y aseguradoras (desde Administración)."
+              ]
+            }
+          ],
+          "keyPoints": [
+            "El rol determina lo que puedes hacer: por ejemplo, la atención del paciente solo está disponible para el rol de médico.",
+            "Sin los requisitos previos configurados no podrás crear agendas ni programar citas."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b1",
+      "title": "Bloque 1 · Agendamiento de una cita",
+      "lessons": [
+        {
+          "id": "l1-1",
+          "code": "L2",
+          "title": "Creación de una agenda: asignación de recursos",
+          "duration": "7:30",
+          "summary": "Crear el consultorio, quirófano o recurso virtual donde se atenderán las citas, con su disponibilidad.",
+          "objectives": [
+            "Crear un recurso de atención (consultorio/quirófano/virtual) desde asignación de recursos.",
+            "Definir la disponibilidad del recurso, base para poder crear la agenda."
+          ],
+          "sections": [
+            {
+              "heading": "Ir a asignación de recursos",
+              "steps": [
+                "Ingresar al Módulo Asistencial, submódulo \"TM de atención de citas\".",
+                "Abrir el apartado \"Asignación de recursos\" (para crear un consultorio o quirófano)."
+              ]
+            },
+            {
+              "heading": "Agregar el consultorio (campos obligatorios)",
+              "steps": [
+                "Dar clic en \"Agregar consultorio\".",
+                "Relacionar una sede.",
+                "Definir el tipo de recurso: consultorio, quirófano o virtual.",
+                "Seleccionar los tipos de servicios que se atenderán en ese consultorio.",
+                "Asociar el centro de consumo.",
+                "Registrar la disponibilidad del consultorio (imprescindible para la agenda)."
+              ]
+            }
+          ],
+          "keyPoints": [
+            "La disponibilidad del recurso es lo que habilita la creación de la agenda: si no la registras, la agenda no se puede crear."
+          ]
+        },
+        {
+          "id": "l1-2",
+          "code": "L3",
+          "title": "Configuración de agendas del médico",
+          "duration": "8:15",
+          "summary": "Crear la agenda de un médico definiendo horario, sede, lugar, servicios relacionados y grupos de atención.",
+          "objectives": [
+            "Crear una nueva agenda para un médico.",
+            "Configurar horario, servicios relacionados y grupos de atención."
+          ],
+          "sections": [
+            {
+              "heading": "Abrir configuración de agendas",
+              "steps": [
+                "Ir al apartado \"Configuración de agendas\" dentro del submódulo \"TM de atención de citas\".",
+                "En la lista desplegable, seleccionar el médico; se mostrará su calendario con los días ya agendados.",
+                "En el recuadro \"Agendas\", dar clic en el símbolo de suma para agregar una nueva agenda."
+              ]
+            },
+            {
+              "heading": "Datos de la agenda",
+              "steps": [
+                "Registrar el nombre de la agenda y una breve descripción.",
+                "Seleccionar un color para distinguir el agendamiento del médico.",
+                "Usar \"Agregar día\" y elegir el día de la semana en la ventana desplegable; presionar \"Aceptar\"."
+              ]
+            },
+            {
+              "heading": "a) Horario",
+              "steps": [
+                "Registrar hora de inicio y hora fin de disponibilidad.",
+                "Seleccionar la sede donde estará vigente la agenda.",
+                "Seleccionar el tipo (consultorio, quirófano, virtual).",
+                "Seleccionar el lugar (se listan los consultorios creados previamente).",
+                "Opcionalmente, elegir un ayudante.",
+                "Marcar la opción de cupos adicionales e ingresar un valor numérico."
+              ]
+            },
+            {
+              "heading": "b) Servicios relacionados",
+              "steps": [
+                "Dar clic en \"Agregar servicios\"; se abre una ventana con el listado de servicios.",
+                "Marcar los servicios que se gestionarán en esta agenda y dar clic en \"Aceptar\".",
+                "Cada servicio se muestra con opción para ver el detalle y para removerlo."
+              ]
+            },
+            {
+              "heading": "c) Grupos de atención",
+              "steps": [
+                "Ingresar un valor numérico en el campo de POS.",
+                "Guardar. Al seleccionar de nuevo al médico se visualizará la agenda registrada."
+              ]
+            }
+          ],
+          "keyPoints": [
+            "El lugar solo lista consultorios ya creados en la lección anterior: primero recursos, luego agenda.",
+            "Los servicios relacionados de la agenda limitan qué se puede programar en ella."
+          ]
+        },
+        {
+          "id": "l1-3",
+          "code": "L4",
+          "title": "Registro de un paciente",
+          "duration": "6:40",
+          "summary": "Inscribir un nuevo paciente con su información básica, complementaria y de aseguradora.",
+          "objectives": [
+            "Inscribir un nuevo paciente desde el módulo de Citas.",
+            "Completar la sección de aseguradora obligatoria y, si aplica, la voluntaria."
+          ],
+          "sections": [
+            {
+              "heading": "Inscribir nuevo paciente",
+              "steps": [
+                "Ir al Módulo Citas, submódulo \"Registro de citas\", apartado \"Registrar\".",
+                "Dar clic en \"Inscribir nuevo paciente\" para abrir la pantalla de registro."
+              ]
+            },
+            {
+              "heading": "Información básica (obligatoria)",
+              "steps": [
+                "Tipo de documento y número de documento.",
+                "Primer nombre y primer apellido.",
+                "Fecha de nacimiento.",
+                "WhatsApp, género y tipo de afiliación."
+              ]
+            },
+            {
+              "heading": "Información complementaria",
+              "steps": [
+                "Ciudad, dirección, etc.",
+                "El único campo obligatorio de esta sección es el número celular."
+              ]
+            },
+            {
+              "heading": "Aseguradora (obligatoria)",
+              "steps": [
+                "Seleccionar la empresa de seguros en el campo \"Seguro\".",
+                "Al elegir la empresa, el desplegable \"Plan\" muestra sus planes; al elegir uno se completan automáticamente población y grupo de ingreso.",
+                "El número de póliza es opcional.",
+                "Existe la opción de agregar una aseguradora voluntaria si se requiere."
+              ]
+            }
+          ],
+          "keyPoints": [
+            "Elegir el plan autocompleta población y grupo de ingreso: no los llenes a mano.",
+            "Al completar el registro, el paciente aparece en la pantalla de \"Registro de citas\"."
+          ]
+        },
+        {
+          "id": "l1-4",
+          "code": "L5",
+          "title": "Programación de una cita",
+          "duration": "7:45",
+          "summary": "Programar la cita de un paciente: aseguradora, servicio, ubicación, sede, médico y agenda disponible; enviar recordatorio.",
+          "objectives": [
+            "Programar una cita buscando las agendas disponibles del médico.",
+            "Enviar el recordatorio de la cita al correo del paciente."
+          ],
+          "sections": [
+            {
+              "heading": "Seleccionar al paciente",
+              "steps": [
+                "En el Módulo Citas, submódulo \"Registro de citas\", apartado \"Registrar\".",
+                "Se listan los pacientes registrados; usar el buscador o \"Inscribir nuevo paciente\".",
+                "Dar clic sobre un paciente para abrir la ventana de programación."
+              ]
+            },
+            {
+              "heading": "Datos de la programación",
+              "steps": [
+                "Seleccionar la aseguradora (autocompleta el campo Plan contrato).",
+                "Seleccionar el tipo de servicio para habilitar el campo Ubicación.",
+                "Al elegir ubicación, el campo Sede muestra las sedes de esa ciudad.",
+                "Elegir el médico.",
+                "La fecha de inicio muestra por defecto el día actual.",
+                "Elegir el día de la semana, marcar el rango de hora (AM/PM) y dar clic en la lupa para buscar agendas disponibles cercanas a la fecha de inicio."
+              ]
+            },
+            {
+              "heading": "Confirmar y recordar",
+              "steps": [
+                "Se visualizan los horarios disponibles del médico.",
+                "Dar clic en \"Añadir\", registrar una anotación y guardar la programación.",
+                "Aparece una ventana de recordatorio; al dar clic se abre la pantalla para enviar el recordatorio al correo del paciente."
+              ]
+            }
+          ],
+          "keyPoints": [
+            "El campo Ubicación no se habilita hasta elegir el tipo de servicio.",
+            "La lupa busca agendas cercanas a la fecha de inicio: ajusta la fecha si no aparecen cupos."
+          ]
+        },
+        {
+          "id": "l1-5",
+          "code": "L6",
+          "title": "Solicitud y aprobación de descuentos",
+          "duration": "6:10",
+          "summary": "Solicitar un descuento sobre una cita y aprobarlo o rechazarlo desde el submódulo de descuento.",
+          "objectives": [
+            "Registrar una solicitud de descuento asociada a una cita.",
+            "Aprobar o rechazar solicitudes de descuento en estado pendiente."
+          ],
+          "sections": [
+            {
+              "heading": "Solicitar descuento",
+              "steps": [
+                "Ir al submódulo \"Descuento\", apartado \"Solicitar descuento\".",
+                "Usar \"Seleccionar cita\" (bajo el título) para ver las citas pendientes por admitir con su fecha de atención.",
+                "Elegir una cita: se autocompletan los campos de la solicitud.",
+                "Seleccionar el tipo de descuento (porcentaje o valor) y registrar el valor numérico.",
+                "Seleccionar un motivo de descuento y agregar una descripción en comentarios."
+              ]
+            },
+            {
+              "heading": "Aprobar descuento",
+              "steps": [
+                "Ir al apartado \"Aprobar descuento\": se listan las solicitudes en estado pendiente.",
+                "Filtrar por fecha de solicitud según se necesite.",
+                "Aceptar la solicitud (estado → aprobado), o rechazarla agregando un comentario de motivo (estado → rechazado)."
+              ]
+            }
+          ],
+          "keyPoints": [
+            "Solo se pueden descontar citas pendientes por admitir.",
+            "El rechazo exige un comentario de motivo; la aprobación no."
+          ]
+        },
+        {
+          "id": "l1-6",
+          "code": "L7",
+          "title": "Consulta y gestión de citas",
+          "duration": "5:50",
+          "summary": "Consultar el histórico de citas y gestionarlas: anular, reprogramar o confirmar.",
+          "objectives": [
+            "Consultar citas del día, históricas y futuras filtrando por fecha de atención.",
+            "Anular, reprogramar o confirmar una cita."
+          ],
+          "sections": [
+            {
+              "heading": "Consulta de citas",
+              "steps": [
+                "Ir al apartado \"Consulta de citas\" en el submódulo \"Registro de citas\".",
+                "Por defecto se listan las citas del día vigente.",
+                "Filtrar por fecha de atención para ver el histórico o las citas futuras."
+              ]
+            },
+            {
+              "heading": "Opciones de gestión",
+              "steps": [
+                "Anular: se abre una ventana para seleccionar el motivo de anulación.",
+                "Reprogramar: seleccionar ubicación, sede y médico; dar clic en la lupa para consultar fecha y médicos disponibles y elegir la nueva hora.",
+                "Confirmar: actualiza el estado a \"Cita programada\"."
+              ]
+            }
+          ],
+          "keyPoints": [
+            "Los motivos de anulación deben existir previamente (requisito del Bloque 0)."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b2",
+      "title": "Bloque 2 · Admisión y atención del paciente",
+      "lessons": [
+        {
+          "id": "l2-1",
+          "code": "L8",
+          "title": "Admisión de una cita",
+          "duration": "7:20",
+          "summary": "Admitir las citas del día verificando información básica, adicional y recaudo; previsualizar la factura electrónica.",
+          "objectives": [
+            "Admitir un paciente del día validando sus datos y su recaudo.",
+            "Previsualizar la factura electrónica tras guardar la admisión."
+          ],
+          "sections": [
+            {
+              "heading": "Admitir pacientes",
+              "steps": [
+                "Ir al Módulo de Admisión, seleccionar la sede.",
+                "Entrar al submódulo \"Admisiones\", apartado \"Admitir pacientes\".",
+                "Se listan las citas del día vigente (se pueden consultar futuras y pasadas por fecha, pero solo se admiten las del día actual).",
+                "Marcar las citas en el check y dar clic en \"Admitir paciente\"."
+              ]
+            },
+            {
+              "heading": "Secciones de la admisión",
+              "steps": [
+                "Información básica: visualizar y editar datos personales, de contacto y de residencia.",
+                "Información adicional: aseguradora obligatoria y voluntaria, grupo sanguíneo, estado civil e información del acompañante.",
+                "Recaudo: valor a pagar, saldo a favor, saldo pendiente, tipo de recaudo y valor a recaudar; incluye entrega o donación del vuelto y agregar servicios complementarios."
+              ]
+            },
+            {
+              "heading": "Cerrar la admisión",
+              "steps": [
+                "Verificar los datos y guardar la admisión.",
+                "Previsualizar la factura electrónica del paciente."
+              ]
+            }
+          ],
+          "keyPoints": [
+            "Solo se admiten citas del día actual, aunque se puedan consultar otras fechas."
+          ]
+        },
+        {
+          "id": "l2-2",
+          "code": "L9",
+          "title": "Saldos a favor y devueltas",
+          "duration": "4:30",
+          "summary": "Revisar y entregar los saldos a favor de los pacientes admitidos.",
+          "objectives": [
+            "Identificar pacientes con saldo a favor pendiente.",
+            "Registrar la entrega de la devuelta."
+          ],
+          "sections": [
+            {
+              "heading": "Gestionar devueltas",
+              "steps": [
+                "Ir al submódulo \"Clientes pacientes\", apartado \"Devueltas\".",
+                "Se listan los pacientes con estado pendiente por saldo a favor.",
+                "Entrar al detalle para ver todos los saldos a favor por fecha, tipo y monto.",
+                "Marcar la fila de vueltos pendientes y dar clic en \"Entregar devuelta\" (estado → entregado)."
+              ]
+            }
+          ],
+          "keyPoints": [
+            "Los saldos a favor deben devolverse: revisa devueltas después de admitir."
+          ]
+        },
+        {
+          "id": "l2-3",
+          "code": "L10",
+          "title": "Atención del paciente: historia clínica (parte 1)",
+          "duration": "9:00",
+          "summary": "Iniciar la atención como médico y documentar preconsulta, examen físico/ocular, impresión diagnóstica (CIE-10) y análisis y plan.",
+          "objectives": [
+            "Abrir la atención de un paciente admitido desde el rol médico.",
+            "Registrar preconsulta, examen ocular e impresión diagnóstica con CIE-10."
+          ],
+          "sections": [
+            {
+              "heading": "Abrir la atención",
+              "steps": [
+                "Ingresar con un usuario en rol de médico.",
+                "Ir al Módulo Historia Clínica, submódulo \"Atención de pacientes\", apartado \"Consulta\".",
+                "Se listan los pacientes admitidos; los que están pendientes por pago no pueden atenderse.",
+                "Al atender, se muestran datos del paciente, un cronómetro del tiempo de atención y una lista desplegable para completar la historia clínica."
+              ]
+            },
+            {
+              "heading": "Preconsulta",
+              "steps": [
+                "Llenar el origen de la atención; si hay evento adverso, marcarlo y registrar el tiempo de evolución.",
+                "Agregar textos predefinidos en motivo de consulta y enfermedad actual.",
+                "Examen físico/ocular: organiza OD y OI en columnas (Externo, P/P/L, Conjuntiva/Esclera, Córnea, Cámara anterior, Iris, Cristalino, Retina/Vítreo, Nervio óptico, Pupilometría, Gonioscopía, Campo visual) más Observaciones; cada campo tiene check \"Normal\" y permite escribir hallazgos. Hay atajos para cargar el examen previo y marcar normal en ambos ojos."
+              ]
+            },
+            {
+              "heading": "Impresión diagnóstica (CIE-10)",
+              "steps": [
+                "Elegir el diagnóstico (CIE-10) en el combo, marcar la lateralidad (OD/OI/AO) y agregar con el +.",
+                "La grilla muestra Fecha, CIE-10, nombre, Ojo, MD (código interno), Estado (pendiente, crónico, resuelto, transitorio) y la columna DX para marcar el diagnóstico principal (ícono azul).",
+                "Registrar el tiempo de evolución del DX (cantidad y unidad: días/semanas/meses/años).",
+                "Flujo sugerido: seleccionar CIE-10 → escoger OD/OI/AO → agregar → definir Estado y marcar DX principal → completar tiempo de evolución."
+              ]
+            },
+            {
+              "heading": "Análisis y plan",
+              "steps": [
+                "Campo de texto libre para documentar el razonamiento clínico (Análisis) y la conducta a seguir (Plan)."
+              ]
+            }
+          ],
+          "keyPoints": [
+            "Un paciente pendiente por pago no puede ser atendido.",
+            "El cronómetro contabiliza el tiempo real de la atención."
+          ]
+        },
+        {
+          "id": "l2-4",
+          "code": "L11",
+          "title": "Atención del paciente: historia clínica (parte 2)",
+          "duration": "8:10",
+          "summary": "Completar signos vitales, tamizaje ocular, dilatación, conciliación medicamentosa y ortóptica; finalizar u ordenar.",
+          "objectives": [
+            "Registrar signos vitales y tamizaje ocular con adjuntos.",
+            "Diligenciar la ortóptica y finalizar la atención o pasar a ordenamiento."
+          ],
+          "sections": [
+            {
+              "heading": "Signos vitales",
+              "steps": [
+                "Registrar tensión arterial (sistólica/diastólica, mmHg), frecuencia cardiaca (LPM), frecuencia respiratoria (RPM), temperatura (°C), peso (kg) y estatura (cm).",
+                "Anotar observaciones en Notas."
+              ]
+            },
+            {
+              "heading": "Tamizaje ocular",
+              "steps": [
+                "Registrar toma de visión y paquimetría para OD y OI.",
+                "Adjuntar y previsualizar fotos del segmento anterior, OCT de retina y OCT del nervio óptico por cada ojo.",
+                "Registrar campo visual por confrontación con observación por ojo."
+              ]
+            },
+            {
+              "heading": "Ortóptica",
+              "steps": [
+                "Registrar resultados en: fórmula final de optometría funcional, amplitudes fusionales, fijación, reflejo de Hirschberg, test de Krimsky, prisma cover test, White test, versiones, test de Bielschowsky, punto próximo de convergencia (PPC), flexibilidad de acomodación, lateralidad, amplitud de acomodación, visión cromática, correspondencia sensorial y estereopsis."
+              ]
+            },
+            {
+              "heading": "Cierre",
+              "steps": [
+                "Existen también las pestañas de Dilatación y Conciliación medicamentosa.",
+                "Como último paso, finalizar la atención u ordenar al paciente."
+              ]
+            }
+          ],
+          "keyPoints": [
+            "Se puede ordenar aunque no se haya finalizado la atención (ver Bloque 3)."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b3",
+      "title": "Bloque 3 · Ordenamiento",
+      "lessons": [
+        {
+          "id": "l3-1",
+          "code": "L12",
+          "title": "Cómo llegar al ordenamiento",
+          "duration": "4:20",
+          "summary": "Las dos rutas para ordenar a un paciente durante el día en curso de la atención.",
+          "objectives": [
+            "Acceder al ordenamiento desde la atención o desde el módulo de ordenamientos."
+          ],
+          "sections": [
+            {
+              "heading": "Dos rutas",
+              "steps": [
+                "Ruta 1: Módulo Historia Clínica → submódulo \"Atención de pacientes\" → apartado \"Consulta\"; filtrar por atenciones pendientes o atendidas del día, entrar al detalle y dar clic en \"Ir a ordenamiento\" (abajo a la derecha).",
+                "Ruta 2: Módulo de Ordenamientos → submódulo \"Órdenes\" → apartado \"Ordenar\"; buscar al paciente por identificación, se listan sus eventos activos y al seleccionar el evento se abre la pantalla para ordenar."
+              ]
+            }
+          ],
+          "keyPoints": [
+            "Se puede ordenar sin haber finalizado la atención, pero solo durante el día en curso de la atención."
+          ]
+        },
+        {
+          "id": "l3-2",
+          "code": "L13",
+          "title": "Ordenar medicamentos y combos",
+          "duration": "7:00",
+          "summary": "Ordenar medicamentos con filtro avanzado, dosis y vía; y usar combos de medicamentos.",
+          "objectives": [
+            "Ordenar un medicamento definiendo cantidad, tiempos, periodo y vía de administración.",
+            "Usar combos de medicamentos preconfigurados."
+          ],
+          "sections": [
+            {
+              "heading": "Medicamentos",
+              "steps": [
+                "En la pestaña Medicamento, usar el filtro avanzado (palabras clave, presentación, diagnósticos) y ordenar por fecha de creación, frecuencia de uso u orden alfabético.",
+                "Seleccionar el medicamento y presionar \"Seleccionar\".",
+                "Elegir el tipo de orden (particular, aseguradora o sugerencia).",
+                "Registrar cantidad, tiempos de cada uso, periodo y vía de administración (si es oftálmico, elegir órgano OI/OD) y una observación de instrucciones.",
+                "El botón flotante naranja agrega la orden al plan.",
+                "Dar clic en \"Ordenar\" para previsualizar e imprimir la orden."
+              ]
+            },
+            {
+              "heading": "Combos de medicamentos",
+              "steps": [
+                "En la pestaña Combos de medicamentos, seleccionar el combo en la lista desplegable.",
+                "Se muestran los medicamentos del combo con dosis, frecuencia, duración, cantidad, vía, ojo (según la vía) y observación.",
+                "Registrar una observación general del paciente o del tratamiento."
+              ]
+            }
+          ],
+          "keyPoints": [
+            "La vía oftálmica obliga a especificar el ojo (OD/OI).",
+            "El botón flotante naranja es el que agrega la orden al plan."
+          ]
+        },
+        {
+          "id": "l3-3",
+          "code": "L14",
+          "title": "Ordenar servicios y combos de servicios",
+          "duration": "6:15",
+          "summary": "Ordenar consultas/ayudas diagnósticas y procedimientos/cirugía, de forma individual o por combos.",
+          "objectives": [
+            "Ordenar un servicio definiendo motivo, tipo de orden, ojo, duración y programación.",
+            "Ordenar combos de servicios."
+          ],
+          "sections": [
+            {
+              "heading": "Servicios",
+              "steps": [
+                "Elegir entre \"Consultas y/o ayudas diagnósticas\" o \"Procedimientos y/o cirugía\".",
+                "Seleccionar el motivo que origina el ordenamiento; se despliega un recuadro con: tipo de orden, servicio, ojo (OI/AO/OD), duración y programación del servicio.",
+                "El botón flotante naranja agrega el servicio al ordenamiento.",
+                "Registrar una observación general del paciente o del servicio."
+              ]
+            },
+            {
+              "heading": "Combos de servicios",
+              "steps": [
+                "Elegir consultas/ayudas diagnósticas o procedimientos/cirugía y el motivo.",
+                "Completar tipo de orden (aseguradora o particular), el ojo (AO/OD/OI) y seleccionar el combo del servicio.",
+                "Registrar una observación general del paciente o del combo."
+              ]
+            }
+          ],
+          "keyPoints": [
+            "Servicios y combos comparten la lógica de motivo + tipo de orden + ojo."
+          ]
+        },
+        {
+          "id": "l3-4",
+          "code": "L15",
+          "title": "Referencia, certificado de asistencia e incapacidad",
+          "duration": "6:30",
+          "summary": "Generar documentos clínicos: referencia/contrarreferencia, certificado de asistencia e incapacidad, validados con firma digital.",
+          "objectives": [
+            "Registrar una referencia y su contrarreferencia.",
+            "Emitir certificado de asistencia e incapacidad con firma digital del médico."
+          ],
+          "sections": [
+            {
+              "heading": "Referencia y contrarreferencia",
+              "steps": [
+                "Referencia: registrar el tipo (p. ej. hospitalización), el motivo de la remisión, el plan de referencia (acciones en la institución receptora) y la expectativa (resultado esperado).",
+                "Contrarreferencia: documentar la persona e institución que acepta la remisión (nombre, cargo, celular y hora de aceptación).",
+                "Se genera un documento con opciones de impresión y botones para regresar o finalizar."
+              ]
+            },
+            {
+              "heading": "Certificado de asistencia",
+              "steps": [
+                "Certifica que el paciente remitido acudió a la institución; diligenciar la fecha.",
+                "Incluir observaciones adicionales y validar con la firma digital y el nombre del médico.",
+                "Se genera el documento con opciones de impresión."
+              ]
+            },
+            {
+              "heading": "Incapacidad",
+              "steps": [
+                "Registrar número de días, fecha de inicio y fecha de fin, y observaciones relevantes.",
+                "Validar con la firma digital del médico y su identificación como responsable.",
+                "Se genera el documento con opciones de impresión."
+              ]
+            }
+          ],
+          "keyPoints": [
+            "Todos estos documentos se validan con la firma digital del médico."
+          ]
+        }
+      ]
+    }
+  ]
+}
