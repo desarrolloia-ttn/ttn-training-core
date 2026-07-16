@@ -8,6 +8,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 BASE_DIR = Path(__file__).resolve().parent.parent
 CONTENT_DIR = BASE_DIR / "content"
 RESOURCES_DIR = BASE_DIR / "resources"
+DATA_DIR = BASE_DIR / "data"  # estado mutable (usuarios, permisos)
 
 
 class Settings(BaseSettings):
@@ -26,6 +27,13 @@ class Settings(BaseSettings):
         "http://localhost:5173",
         "http://127.0.0.1:5173",
     ]
+
+    # --- Autenticación ---
+    # Secreto para firmar los tokens de sesión. CAMBIAR en producción.
+    auth_secret: str = "dev-insecure-secret-cambiame"
+    auth_token_ttl_hours: int = 12
+    # Contraseña inicial del usuario admin al sembrar users.json (cambiar luego).
+    admin_default_password: str = "admin1234"
 
     @property
     def assistant_enabled(self) -> bool:

@@ -1,0 +1,176 @@
+GÚIA DE USO BIOWEL: ORDENAMIENTO Y DISPENSACIÓ N A
+PARTIR DE UN EVENTO DE PROGRAMASTOP
+4 de junio de 2026
+
+Índice
+
+1 Objetivo
+
+3
+
+2 Acceso al sistema
+
+3
+
+3 Ordenamiento a partir de un evento en PROGRAMASTOP
+
+3
+
+3.1 Consulta de un paciente . . . . . . . . . . . . . . . . . . . . . . . 3
+
+3.2 Ordenamiento de medicamentos . . . . . . . . . . . . . . . . . . 5
+
+3.3 Ordenamiento de un servicio . . . . . . . . . . . . . . . . . . . . 7
+
+3.4 Ordenamiento de combos de medicamentos y servicios . . . . . . 9
+
+3.5 Ordenamiento de una referencia . . . . . . . . . . . . . . . . . . 12
+
+3.6 Certificación de asistencia . . . . . . . . . . . . . . . . . . . . . . 13
+
+3.7 Ordenamiento de una incapacidad . . . . . . . . . . . . . . . . . 14
+
+4 Dispensación de medicamentos
+
+16
+
+4.1 Parametrización de soportes para dispensación . . . . . . . . . . . 16
+
+4.2 Editar datos del paciente . . . . . . . . . . . . . . . . . . . . . . 17
+
+4.3 Dispensación de un medicamento . . . . . . . . . . . . . . . . . . 21
+
+5 Conclusión
+
+34
+
+6 Flujo
+
+35
+
+1. Objetivo
+El objetivo de este manual es proporcionar un flujo detallado y claro para ordenar y dispensar medicamentos a un paciente, utilizando un evento previamente registrado en PROGRAMASTOP. Este manual está diseñado para guiar al usuario a través de cada paso necesario, desde la consulta inicial del paciente hasta la dispensación de los medicamentos y asegurando un proceso eficiente. Nota adicional Antes de proceder con el ordenamiento y la dispensación de medicamentos, es fundamental que las tablas necesarias estén debidamente parametrizadas en el sistema. Esto asegura que los datos relevantes, como los medicamentos disponibles, los servicios, las aseguradoras, las sedes y las configuraciones de los pacientes, estén correctamente asociados y sean accesibles durante el proceso.
+2. Acceso al sistema
+Ingresar a través del enlace Biowel aquí. Iniciar sesión con tus credenciales (usuario y contraseña). Al ingresar por primera vez se debe seleccionar una cuenta (empresa) y el rol.
+3. Ordenamiento a partir de un evento en PROGRAMASTOP
+3.1. Consulta de un paciente
+1. En el módulo de ordenamientos, ingresamos al submódulo Ordenes, en el apartado Ordenar.
+
+2. Se visualizará un campo para ingresar el número de documento del paciente con una programación en PROGRAMASTOP. Solo se consultarán los pacientes que tengan una programación vigente para el día actual.
+3. Al ingresar el número de documento del paciente, se mostrará el evento programado en el día, junto a su diagnostico principal y secundario.
+4. Al hacer clic en el evento del paciente, sus datos se mostrarán en el apartado izquierdo de la pantalla. En la parte derecha nos encontraremos situados
+
+automáticamente en el ordenamiento de medicamentos. Además, en las pestañas superiores se visualizarán las diferentes opciones disponibles para ordenar.
+3.2. Ordenamiento de medicamentos
+1. Procedemos a seleccionar el Tipo de orden: Particular Aseguradora Sugerencia
+2. Una vez seleccionado el Tipo de orden, escogemos los medicamentos y llenaremos los campos de su receta como la cantidad, el tiempo, durante, periodo y las vías de administración.
+
+3. Damos clic en el icono con forma de flecha para agregar el medicamento, podremos ordenar los medicamentos que sean necesarios.
+4. Damos clic en el botón Ordenar, donde se mostrará una ventana para visualizar el detalle del ordenamiento.
+
+3.3. Ordenamiento de un servicio
+1. Al ordenar un servicio, se muestran dos opciones para ordenar el servicio.
+2. Al seleccionar la opción por consulta, debemos escoger el motivo que origina el ordenamiento: Accidente de trabajo Accidente de transito (SOAT) Enfermedad general
+
+Enfermedad profesional
+3. Seleccionado el motivo que origina el ordenamiento, se habilitarán los campos para seleccionar el tipo de orden, junto a los servicios creados previamente y con un plan contrato vigente.
+4. Importante seleccionar la sub-especialidad.
+5. Al dar clic en el botón con forma de una flecha apuntando hacia abajo color naranaja, se agregará el servicio.
+6. Se agrega un pequeña descripción en el campo Observaciones generales. 7. Damos clic en el botón Ordenar, donde se mostrará una ventana para visua-
+lizar el detalle del ordenamiento.
+
+3.4. Ordenamiento de combos de medicamentos y servicios
+1. Para ordenar el combo de medicamentos, debemos ubicarnos en la pestaña Combos M.
+2. Seleccionar los combos de medicamentos previamente creados en la sección combos de cirugía ??
+3. Al seleccionar el combo de medicamento, se mostrará un pequeño detalle de los medicamentos relacionados en este combo.
+4. Se agrega un pequeña descripción en el campo Observaciones generales. 5. Damos clic en el botón Ordenar, donde se mostrará el detalle del ordena-
+miento de un combo de medicamento.
+
+6. Para ordenar el combo de un servicios, nos ubicamos en la pestaña Combos s.
+7. Debemos seleccionar la orden a realizar.
+8. Al seleccionar la opción por consulta, se mostrará un campo para seleccionar el motivo que generará el ordenamiento, al seleccionar una opción habilitará las opciones para seleccionar el Tipo de orden y seleccionar los combos de servicios previamente creados en la sección Configuración combos de servicios ??
+
+9. Se mostrará el detalle de los servicios relacionados en el combo.
+10. Se agrega un pequeña descripción en el campo Observaciones generales.
+11. Damos clic en el botón Ordenar, donde se mostrará una ventana para visualizar el detalle del combo de servicio.
+
+3.5. Ordenamiento de una referencia
+1. Nos ubicamos en la pestaña de Referencia, donde se mostrarán los campos a registrar para un certificado de referencia.
+2. Se procede a registrar los campos de la sección referencia, donde el campo motivo debe tener 50 caracteres.
+3. Registre los campos de la sección Contrarreferencia. Una vez completados, haga clic en el botón con el ícono de flecha hacia abajo para agregarlos.
+4. Se mostrará el detalle de la referencia registrada, damos clic en generar para ver el detalle de la referencia en formato pdf.
+
+3.6. Certificación de asistencia
+1. Nos ubicamos en la pestaña Cert. de asistencia, llenamos el campo de fecha y el campo de observaciones.
+
+2. Al hacer clic en el botón generar, se mostrará el detalle de la asistencia en formato pdf.
+3.7. Ordenamiento de una incapacidad
+1. En la pestaña Incapacidad, se mostrarán los campos para generar el certificado de una incapacidad.
+
+2. el Campo fecha fin se calculará automáticamente, al registrar un valor en el campo No. de días.
+3. Al finalizar el registro de los campos se debe dar clic en el botón generar y se mostrará el detalle del certificado en formato pdf.
+
+4. Dispensación de medicamentos
+4.1. Parametrización de soportes para dispensación
+1. Ingresamos al módulo de Dispensación, en el submódulo configuración y accedemos en el apartado Parametrización de soportes.
+2. Se mostrarán las empresas clientes con sus parametrizaciones realizadas. Damos clic en Crear parametrización y nos dirigirá a un apartado para la parametrización de los soportes de dispensación de una empresa cliente.
+3. Seleccionamos la empresa cliente y su tipo de contrato. A continuación, se mostrará el detalle de los documentos de soporte que estén parametrizados en el sistema.
+
+4. Al dar clic en agregar llenamos el campo del nombre del nuevo documento y seleccionamos el tipo de archivo.
+5. Haga clic en Guardar para finalizar el registro del documento de soporte.
+4.2. Editar datos del paciente
+1. En el módulo de citas, ingresamos en el submódulo registro de citas, en el apartado registrar.
+
+2. En el campo Buscar, introducimos en número de documento del paciente y le damos en la opción para buscar.
+3. Damos clic en el paciente para y se mostrara un pequeño detalle del paciente, daremos clic en el icono en forma de persona y luego en el icono de un lápiz para editar la información del paciente.
+
+4. Se habilitarán los campos de la información básica del paciente, donde se deben registrar los campos obligatorios.
+5. Se llena el campo de celular en información complementaria, los campos en aseguradora obligatoria, vendrán predeterminados, se deben editar en los
+
+casos necesarios.
+6. Finalmente, haga clic en Guardar para registrar la nueva información del paciente en el sistema.
+4.3. Dispensación de un medicamento
+1. Al ingresar al módulo de Dispensación, se visualizarán las sedes asociadas al usuario en sesión.
+2. Seleccionamos la sede donde se ordenó el medicamento del paciente; de lo contrario, no se mostrará su ordenamiento.
+3. Se mostrarán los submódulos de dispensación, ingresamos al apartado Entrega de medicamentos.
+
+4. Ubicados en este apartado, se mostrarán dos campos de búsquedas; por nombre o ID del paciente y aseguradora.
+Bú squeda por nombre o id del paciente: Ingresando el nombre del paciente o su número de identificación.
+
+Bú squeda por aseguradora: Este campo de lista desplegable mostrará las empresas-clientes registradas en el sistema. Al seleccionar una opción, se listarían los pacientes ordenados según la aseguradora asociada.
+5. Al Al hacer clic en el paciente ordenado, se mostrarán sus datos básicos y los ordenamientos de medicamentos asociados.
+6. Al dar clic en el ordenamiento del paciente, se visualizarán dos opciones de entrega de medicamentos.
+
+Aseguradora Se mostrará el detalle del ordenamiento del paciente.
+Seleccionamos la opción Escanear medicamentos, para buscar el medicamento ordenado del paciente.
+
+Se abrirá una pequeña ventana con un campo de búsqueda por el código del articulo activo (código de barras) relacionado al medicamento. Se visualiza la cantidad de la entrega estimada del medicamento del ordenamiento.
+Al ingresar la cantidad, damos clic por fuera del recuadro y se mostrará su valor en el la columna Entrega real.
+
+Se adjuntan los soportes los cuales fueron previamente parametrizados ya que es obligatorio para la dispensación.
+
+Complete los campos requeridos para el registro de entrega, incluyendo: las fotografías del rostro e identificación, la firma, y el nombre de la persona que recibe. Después, haga clic en Establecer entrega para finalizar el proceso de dispensación.
+
+Se mostrará una pantalla del resumen de compra, se registran los campos para generar la entrega y el valor de monto pagado.
+
+Damos clic en Generar resumen de dispensación para finalizar la dispensació n.
+Venta libre
+Se mostrará el detalle del ordenamiento del paciente.
+
+Seleccionamos la opción Escanear medicamentos, para buscar el medicamento ordenado del paciente.
+Se abrirá una pequeña ventana con un campo de búsqueda por el código del articulo activo (código de barras) relacionado al medicamento. Podremos ingresar una cantidad diferente a la ordenada.
+
+Al ingresar la cantidad, damos clic por fuera del recuadro y se mostrará su valor en el la columna Entrega real.
+Se adjuntan los soportes los cuales fueron previamente parametrizados ya que es obligatorio para la dispensación.
+
+Complete los campos requeridos para el registro de entrega, incluyendo: las fotografías del rostro e identificación, la firma, y el nombre de la persona que recibe. Después, haga clic en Establecer entrega para finalizar el proceso de dispensación.
+
+Se mostrará una pantalla del resumen de compra, se registran los campos para generar la entrega y el valor de monto pagado.
+
+Damos clic en Generar resumen de dispensación para finalizar la dispensació n.
+5. Conclusión
+El proceso de registro, ordenamiento y dispensación de medicamentos a través de un evento en PROGRAMASTOP ha sido completamente detallado en este manual.
+
+Al seguir los pasos descritos, los usuarios podrán realizar estas acciones de manera eficiente y minimizar errores.
+6. Flujo
+

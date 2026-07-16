@@ -69,6 +69,30 @@ uvicorn app.main:app --reload --port 8000
 | GET | `/api/products/{product}/modules/{module_id}` | Detalle del módulo con bloques y lecciones |
 | GET | `/api/assistant/suggestions` | Preguntas sugeridas para el chat |
 | POST | `/api/assistant/chat` | Pregunta del alumno → respuesta de OpenAI |
+| POST | `/api/auth/login` | Login con usuario/contraseña → token + usuario |
+| GET | `/api/auth/me` | Usuario actual (requiere token Bearer) |
+| GET | `/api/users` | Lista de usuarios (solo admin) |
+| PATCH | `/api/users/{id}/modules` | (Des)bloquear un módulo para un usuario (solo admin) |
+
+## Autenticación y roles
+
+- Usuarios, roles y módulos desbloqueados se guardan en `data/users.json`
+  (se siembra solo la primera vez; el archivo está en `.gitignore`).
+- Contraseñas hasheadas con PBKDF2 (nunca en texto plano). Token de sesión
+  firmado con HMAC (`AUTH_SECRET`), enviado como `Authorization: Bearer <token>`.
+- Dos roles: **admin** (acceso a todos los módulos + gestión de usuarios) y
+  **usuario** (todos los módulos bloqueados salvo los que el admin le desbloquee).
+
+**Usuarios demo sembrados (CAMBIAR estas contraseñas):**
+
+| Usuario | Contraseña | Rol |
+|---------|-----------|-----|
+| `admin` | `admin1234` (o `ADMIN_DEFAULT_PASSWORD`) | admin |
+| `ana` | `ana1234` | usuario |
+| `carlos` | `carlos1234` | usuario |
+
+Para regenerar los usuarios demo, borra `data/users.json` y reinicia el backend.
+
 
 Ejemplo de `POST /api/assistant/chat`:
 

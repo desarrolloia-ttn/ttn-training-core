@@ -63,6 +63,10 @@ class ChatRequest(BaseModel):
         default=None,
         description="Contexto de la pantalla actual del alumno (p. ej. la lección).",
     )
+    moduleId: int | None = Field(
+        default=None,
+        description="Módulo actual, para cargar el/los manual(es) correcto(s) como fuente.",
+    )
     history: list[ChatMessage] = Field(default_factory=list)
 
 
@@ -74,3 +78,52 @@ class ChatResponse(BaseModel):
 class Suggestion(BaseModel):
     label: str
     prompt: str
+
+
+# --------- Autenticación / usuarios ---------
+class LoginRequest(BaseModel):
+    username: str
+    password: str
+
+
+class UserPublic(BaseModel):
+    """Usuario sin datos sensibles (nunca incluye la contraseña)."""
+
+    id: str
+    username: str
+    name: str
+    role: Literal["admin", "usuario"]
+    unlockedModules: list[int] = Field(default_factory=list)
+    # progreso de lecciones por módulo: { "2": ["obj", "acceso", ...] }
+    progress: dict[str, list[str]] = Field(default_factory=dict)
+
+
+class ProgressUpdate(BaseModel):
+    moduleId: int
+    completed: list[str] = Field(default_factory=list)
+
+
+class LoginResponse(BaseModel):
+    token: str
+    user: UserPublic
+
+
+class ModuleAccessUpdate(BaseModel):
+    moduleId: int
+    unlocked: bool
+
+
+class UserCreate(BaseModel):
+    username: str
+    name: str
+    password: str
+    role: Literal["admin", "usuario"] = "usuario"
+    unlockedModules: list[int] = Field(default_factory=list)
+
+
+class UserUpdate(BaseModel):
+    """Actualización parcial: solo los campos presentes se modifican."""
+
+    name: str | None = None
+    role: Literal["admin", "usuario"] | None = None
+    password: str | None = None

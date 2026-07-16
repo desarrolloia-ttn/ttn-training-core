@@ -25,7 +25,7 @@ def chat(req: ChatRequest) -> ChatResponse:
         raise HTTPException(status_code=422, detail="El mensaje está vacío.")
 
     try:
-        reply, model = assistant.chat(req.message, req.context, req.history)
+        reply, model = assistant.chat(req.message, req.context, req.history, req.moduleId)
     except Exception as exc:  # noqa: BLE001 - se traduce a error HTTP legible
         raise HTTPException(status_code=502, detail=f"Error consultando a OpenAI: {exc}") from exc
 

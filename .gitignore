@@ -4,6 +4,9 @@
 venv/
 env/
 
+# Estado mutable (usuarios sembrados, permisos)
+data/
+
 # Python
 __pycache__/
 *.py[cod]

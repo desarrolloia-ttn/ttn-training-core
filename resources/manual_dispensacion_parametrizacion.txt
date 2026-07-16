@@ -1,0 +1,415 @@
+GUÍA DE USO BIOWEL: MÓ DULOS DE ORDENAMIENTO Y DISPENSACIÓ N A
+PARTIR DE UN EVENTO DE PROGRAMASTOP
+4 de junio de 2026
+
+Índice
+
+1 Objetivo
+
+4
+
+2 Alcance del documento
+
+4
+
+3 Consideraciones importantes
+
+4
+
+4 Acceso al sistema
+
+5
+
+5 Configuración inicial en el módulo administración
+
+6
+
+5.1 Cuentas . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+
+5.2 Roles y permisos . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+
+5.3 Usuarios . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+
+5.4 Resolución de facturación . . . . . . . . . . . . . . . . . . . . . . 9
+
+5.5 Sedes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+
+5.6 Plan único de cuentas . . . . . . . . . . . . . . . . . . . . . . . . 10
+
+5.7 Unidad funcional . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+
+5.8 Centros de costos . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+
+5.9 Unidades de medidas . . . . . . . . . . . . . . . . . . . . . . . . 12
+
+5.10 Familias de inventarios . . . . . . . . . . . . . . . . . . . . . . . 12
+
+5.11 Artículos activos . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+
+5.12 Centros de consumo . . . . . . . . . . . . . . . . . . . . . . . . . 14
+
+6 Configuración submódulo TM de facturación
+
+15
+
+6.1 Especialidad . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15
+
+6.2 Sub-Especialidad . . . . . . . . . . . . . . . . . . . . . . . . . . 16
+
+6.3 Tipos de códigos . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+
+6.4 Hoja de consumo . . . . . . . . . . . . . . . . . . . . . . . . . . 18
+
+6.5 Servicios . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21
+
+6.6 Tipo de régimen . . . . . . . . . . . . . . . . . . . . . . . . . . . 24
+
+6.7 Tipos de autorización . . . . . . . . . . . . . . . . . . . . . . . . 25
+
+6.8 Tipo de modalidad de pago . . . . . . . . . . . . . . . . . . . . . 26
+
+6.9 Tipos de coberturas - plan beneficio . . . . . . . . . . . . . . . . 26
+
+6.10 Empresa - Cliente . . . . . . . . . . . . . . . . . . . . . . . . . . 27
+
+6.11 Población . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 29
+
+6.12 Manual tarifario . . . . . . . . . . . . . . . . . . . . . . . . . . . 30
+
+6.13 Asignación de servicios . . . . . . . . . . . . . . . . . . . . . . . 37
+
+6.14 Plan contrato . . . . . . . . . . . . . . . . . . . . . . . . . . . . 38 6.15 Cuota moderadora . . . . . . . . . . . . . . . . . . . . . . . . . . 42
+
+7 Parametrización del módulo asistencial
+
+44
+
+7.1 Medicamentos . . . . . . . . . . . . . . . . . . . . . . . . . . . . 44
+
+7.2 Configuración combos de servicios . . . . . . . . . . . . . . . . . 48
+
+7.3 Combos de cirugía . . . . . . . . . . . . . . . . . . . . . . . . . 49
+
+7.4 Motivos de cancelación de órdenes de medicamentos . . . . . . . 51
+
+7.5 Asignación de sedes . . . . . . . . . . . . . . . . . . . . . . . . . 51
+
+7.6 Impresiones diagnósticas (CIE10) . . . . . . . . . . . . . . . . . 53
+
+7.7 Diagnósticos extendidos . . . . . . . . . . . . . . . . . . . . . . . 54
+
+8 Configuración de medicamentos para un ordenamiento a partir de
+
+un evento de PROGRAMASTOP
+
+55
+
+8.1 Relacionar el artículo a un almacén . . . . . . . . . . . . . . . . . 55
+
+8.2 Agregar tipos de insumos . . . . . . . . . . . . . . . . . . . . . . 57
+
+8.3 Añadir lotes asistenciales . . . . . . . . . . . . . . . . . . . . . . 59
+
+8.4 Asociar medicamento a un artículo activo . . . . . . . . . . . . . 61
+
+8.5 Parametrización por base de datos . . . . . . . . . . . . . . . . . 64
+
+8.6 Asignación de medicamentos a un manual tarifario . . . . . . . . 64
+
+8.7 Habilitar dispensación en plan contrato . . . . . . . . . . . . . . . 65
+
+1. Objetivo
+Este documento tiene como objetivo proporcionar una guía detallada y paso a paso para la correcta configuración e implementación de las parametrizaciones iniciales de tablas en el sistema BIOWEL, específicamente para el ordenamiento y dispensación de medicamentos basados en un evento de Programastop. La correcta parametrización de los módulos involucrados, como administración, facturación, contabilidad y otros, es crucial para asegurar un proceso fluido y eficiente en el sistema.
+Notificación Importante:
+Es importante destacar que todas las tablas relacionadas con el submódulo de compras forman parte de la versión inicial del software, y su correcta parametrización es esencial para el funcionamiento del sistema.
+2. Alcance del documento
+Este documento tiene como alcance proporcionar las instrucciones necesarias para la correcta parametrización inicial de las tablas maestras y configuraciones requeridas en el sistema BIOWEL, con el fin de habilitar el proceso de ordenamiento y dispensación de medicamentos a partir de eventos generados desde PROGRAMASTOP.
+El presente manual está dirigido a los usuarios responsables de la configuración del sistema, incluidos los administradores funcionales, el personal de facturación, el personal asistencial y los usuarios encargados de la implementación inicial del aplicativo.
+3. Consideraciones importantes
+Antes de iniciar el proceso de parametrización, tenga en cuenta las siguientes consideraciones para garantizar el correcto funcionamiento del sistema BIOWEL y la integración con PROGRAMASTOP:
+La parametrización debe realizarse en el orden establecido en este documento para evitar inconsistencias en la configuración del sistema.
+
+Los nombres, códigos y prefijos registrados en BIOWEL deben coincidir exactamente con los configurados en PROGRAMASTOP, ya que estos permiten la correcta identificación de eventos, pacientes y servicios.
+Es obligatorio completar todos los campos marcados como obligatorios en cada una de las configuraciones, ya que la omisión de estos puede impedir el funcionamiento adecuado del sistema.
+Las sedes, servicios, empresas cliente y contratos deben estar correctamente configurados antes de habilitar la dispensación de medicamentos.
+Los artículos activos deben crearse previamente antes de registrar los medicamentos, debido a que estos serán asociados durante el proceso de parametrizació n.
+Se recomienda verificar la correcta asignación de usuarios, roles y permisos antes de iniciar la operación del sistema.
+Los manuales tarifarios deben configurarse previamente para poder realizar la asignación de medicamentos y habilitar la dispensación.
+Es importante validar que los contratos tengan habilitada la opción de dispensación para permitir el ordenamiento y dispensación desde eventos PROGRAMASTOP.
+La asignación de sedes a los usuarios es obligatoria para garantizar que la dispensación se realice correctamente según la ubicación correspondiente.
+Se recomienda realizar pruebas de funcionamiento una vez finalizada la parametrización antes de iniciar la operación en ambiente productivo.
+4. Acceso al sistema
+Ingresar a través del enlace Biowel aquí.
+Iniciar sesión con tus credenciales (usuario y contraseña).
+Al ingresar por primera vez se debe seleccionar una cuenta (empresa) y el rol.
+
+5. Configuración inicial en el módulo administració n
+1. Se debe ingresar en el módulo administración.
+2. Nos dirigimos a la TM de administración donde se desplegarán varias opciones.
+5.1. Cuentas
+1. Nos dirigimos al apartado de Cuentas. 2. Aquí se visualizarán todas las cuentas creadas en el sistema.
+
+3. Creamos una cuenta en la opción correspondiente a cuentas. 4. Donde se abrirá una pantalla para registrar la información general de
+la entidad (cuenta), la información del representante legal y adjuntar tanto el logo de la entidad como la firma del representante.
+Al guardar, se visualizará la nueva cuenta en estado ”Habilitado”.
+5.2. Roles y permisos
+1. Nos dirigimos al submódulo TM de seguridad en gestión de roles y permisos para crear un rol con sus respectivos permisos para los accesos que este tendrá en el aplicativo.
+
+5.3. Usuarios
+1. En este submódulo registramos los usuarios en la opción de usuarios y relacionamos el rol y la entidad (cuenta) donde estará relacionado el usuario.
+
+5.4. Resolución de facturación
+1. Accedemos al submódulo TM de facturación en Resoluciones de facturación para el registro de una resolución.
+5.5. Sedes
+1. Muy importante el prefijo debe ser registrado exactamente igual a los prefijos de las sedes registradas en Programastop. Ya que está permitirá consultar al paciente con un evento a partir de Programastop.
+2. Con las resoluciones creadas y en estado “autoriza”, procedemos a la creación de sedes en el submódulo TM de administración en el apartado “Sedes”.
+
+5.6. Plan ú nico de cuentas
+1. Nos dirigimos al submódulo TM de contabilidad las creaciones de las cuentas contables en el plan único de cuentas.
+
+5.7. Unidad funcional
+1. Se crean las unidades funcionales relacionándoles una cuenta contable y una sede.
+5.8. Centros de costos
+1. Se crean los centros de costos con un código único.
+
+5.9. Unidades de medidas
+1. En el submódulo de TM de compra se deben definir las unidades de medidas.
+5.10. Familias de inventarios
+1. Se crean las familias de inventarios, se checkean las opciones si permite ordenamiento, dispensación o clasificación de proveedor.
+
+5.11. Artículos activos
+1. En el módulo de administración, ingresamos a la tm de compra, en el apartado artículos activos.
+2. Se visualizarán los artículos actualmente creados, damos clic en la opción Crear artículo.
+3. Se abrirá una ventana emergente en la que deberá registrar el artículo. En este caso, el artículo corresponde al medicamento que será utilizado para el proceso de ordenamiento y posterior dispensación.
+4. Muy importante marcar la opción Maneja lote ya que está opción no podrá ser editada en el artículo una vez creado.
+
+5. Una vez diligenciados todos los campos obligatorios y los indicados en el paso anterior, haga clic en el botón Guardar para completar el registro.
+5.12. Centros de consumo
+1. Se procede a la creación de centros de consumo.
+
+6. Configuración submódulo TM de facturación
+6.1. Especialidad
+1. En el apartado “Especialidad”, se listarán todas las especialidades previamente creadas.
+2. Para agregar una nueva, seleccione la opción “Crear especialidad”. Se mostrará un formulario con el campo obligatorio descripción, el cual debe diligenciar para registrar el servicio. Una vez guardada, la especialidad quedará visible en la lista en estado “Habilitado”.
+
+6.2. Sub-Especialidad
+1. En el apartado “Subespecialidad” se listarán todas las subespecialidades previamente creadas.
+2. Para una nueva subespecialidad, seleccione la opción “Crear subespecialidad”. Se mostrará un formulario con los campos especialidad como un desplegable que listará las especialidades creadas anteriormente y el campo descripción, los cuales deben diligenciar para registrar la subespecialidad. Una vez guardada, quedará visible en la lista en estado “Habilitado”.
+
+6.3. Tipos de códigos
+1. Ingresando al submódulo TM de Facturación, en el apartado tipos de código, encontramos una pantalla para visualizar los tipos de códigos creados y una opción para crearlos.
+2. Al dar clic sobre está opción, procede a mostrarse los campos obligatorios para la creación del tipo de código, campo descripción y tipo de servicio que es un campo desplegable con opción múltiple de selección. Una vez creado se mostrará con estado “Habilitado” .
+3. Se debe crear un código exclusivo para habilitar la dispensación de medicamentos en general. Este código es necesario para activar la funcionalidad
+
+de dispensación dentro del sistema y garantizar el correcto registro de las ó rdenes.
+6.4. Hoja de consumo
+1. En el apartado “Hoja de consumo” se listarán todas las hojas previamente creadas.
+2. Para registrar una nueva, seleccione la opción “Crear hoja de consumo”, se mostrará un campo para registrar el nombre de la hoja de consumo.
+
+3. Una vez completado habilitará el campo tipo de servicio como una lista desplegable, el siguiente paso es ampliar las etapas en la hoja de consumo con la respectiva opción que se muestra como una flecha hacia abajo.
+4. Una vez desplegada la etapa se mostrará la opción “Agregar artículos”, en el campo “Familia” elija en la lista desplegable la opción de la familia de inventario para mostrar los artículos relacionados a está y poder marcar los que se utilizarán en la etapa de la hoja de consumo.
+
+5. Se mostrará los artículos seleccionados, con dos campos donde se debe ingresar un valor cuantitativo en “Cantidad teórica” de forma automática, el campo “Cantidad a facturar” mostrará el mismo valor, únicamente para visualización, y no podrá ser editado.
+
+Una vez guardado quedará visible en el listado en estado “Habilitado”.
+6.5. Servicios
+1. Tener en cuenta que estos servicios deben tener el nombre y código exactamente igual a los servicios registrados en Programastop. Para consultar el evento del paciente a partir de Programastop.
+2. En el apartado “Servicios” se listarán todos los servicios creados anteriormente.
+
+3. Para el registro de un nuevo servicio ingrese a la opción “Crear servicio” se abrirá una vista correspondiente en la misma ventana compuesto por dos pestañas “Información general” e “Información contable” los cuales se deben diligenciar todos los campos ya que estos son obligatorio. Información general Có digo Descripció n Tipo de código Tipo de servicio Hoja de atención Sedes Sub-tipo de servicio Especialidad Sub especialidad Definició n Recomendaciones Código homologo (CUPS/CUMS) Puntaje interno Duración óptima del servicio
+
+Información contable Cuenta de ingreso Cuenta de devolución Cálculo manual Costo directo Costo indirecto Gastos adicionales Costo total Costo unitario IVA Hoja de consumo
+
+Una vez creado, se visualizará en estado ”Habilitado”.
+6.6. Tipo de régimen
+1. Ingresar al ”submódulo de Facturación”, en el apartado Tipo de régimen.
+2. Hacer clic en el botón Crear tipo de régimen. 3. Se abrirá una ventana emergente en la que se debe diligenciar el campo
+Descripción (obligatorio). Luego damos clic en ”Guardar”para registrar la informació n.
+
+Una vez guardado, el nuevo tipo de régimen se visualizará en estado Habilitado.
+6.7. Tipos de autorización
+1. En el apartado “Tipos de autorización” se mostrarán las autorizaciones creadas. Al dar clic en “Crear tipo de autorización” se abrirá una pequeña ventana con un campo obligatorio “Descripción”. Una vez creado se visualizará en estado “Habilitado”.
+
+6.8. Tipo de modalidad de pago
+1. En el apartado “Tipo de modalidad de pago” se visualizan las modalidades de pago. Al dar clic en “Crear tipo de modalidades” se abrirá una pequeña ventana con un campo obligatorio “Descripción”. Una vez creado se visualizará en estado “Habilitado”.
+6.9. Tipos de coberturas - plan beneficio
+1. En el apartado “Tipos de coberturas - plan beneficio” se visualizan las modalidades de pago. Al dar clic en “Crear tipo de cobertura o plan beneficio” se abrirá una pequeña ventana con un campo obligatorio “Descripción”. Una vez creado se visualizará en estado “Habilitado”.
+
+6.10. Empresa - Cliente
+1. Al registrar una nueva empresa cliente, es fundamental que los campos de la empresa se ingresen de manera exacta a los de la empresa cliente previamente registrada en PROGRAMASTOP. Esto incluye, pero no se limita a, los siguientes campos: nombre, tipo de código SIIS, tipo de empresa, entre otros.
+2. En el apartado “Empresa - Cliente” se mostrarán las empresas. Seleccione “Crear empresa cliente” se mostrarán los campos para la creación de una empresa por secciones.
+Información general Se deben registrar todos los campos en esta sección ya que son obligatorios. Oficina principal Se deben registrar todos los campos en esta sección ya que son obligatorios. Información contacto interno (opcional) Campos de un contacto para la comunicación.
+
+Relación con institución Se deben seleccionar el tipo de empresa que será al momento del registro, tipo de planes-contrato, la sedes registradas anteriormente y el régimen registrado anteriormente.
+3. Se debe registrar en el campo de tipo de régimen, con la información del código SIIS de la empresa cliente registrada en Progrmastop.
+Una vez creado se visualizará en estado “Habilitado”.
+
+6.11. Población
+1. Una vez creada la empresa cliente, procedemos a crear la población. Nos dirigimos al ”submódulo tabla maestra de administración”, en el apartado ”població n”.
+2. Hacer clic en el botón C¸ rear población”. Se abrirá una ventana emergente en la que se deben diligenciar los campos obligatorios para registrar la información de la población.
+3. Asociándola a la empresa cliente y llamándola en la descripción Programastop ya que está descripción permite el ordenamiento de pacientes a partir de un evento generado de Top.
+4. Una vez haya sido creada se listarán las poblaciones creadas junto al clienteempresa al que se relaciono y su estado ”Habilitado”.
+
+6.12. Manual tarifario
+1. En el apartado “Manual tarifario” se listarán los manuales previamente creados.
+2. Para el registro de un nuevo manual haga clic en la opción “Crear manual”. Se mostrará un formulario donde al diligenciar el campo “Nombre manual” y “Tipo de código” se habilitarán los “Tipos de servicios” relacionados al tipo de código.
+3. Al marcar un tipo de servicio como “CIRUGÍA” se habilitará “Configuración de Cirugía” y este a su vez tendrá cuatro opciones: UVR Al marcar esta opción se mostrarán cuatro pestañas: • Honorarios especialistas Al dar clic en “Modificar Honorarios especialistas” se mostrará un campo de lista desplegable “Formato de liquidación” con dos opciones “Fijo” y “Rango”. Al seleccionar la opción “Fijo” podremos
+
+ingresar los valores en los campos obligatorios para “Cirujano”, “Anestesiólogo” y “Ayudante”.
+Al seleccionar la opción “Rango” se deben ingresar los rangos de valores UVR que tendrán los servicios en la facturación y aplicar los valores dados en los campos “Cirujano”, “Anestesiólogo” y “Ayudante”. Al guardar el registro, será posible agregar más elementos.
+• Valores sala, materiales e insumos Al dar clic en “Modificar Valores sala, materiales e insumos” se mostrará un campo de lista desplegable “Formato de liquidación” con dos opciones “Fijo” y “Rango”. Al seleccionar la opción “Fijo” podremos ingresar los valores en los campos obligatorios para
+
+“Mat. quirúrgicos” y “Derechos de sala”. Al guardar el registro, será posible agregar más elementos.
+Al seleccionar la opción “Rango” podremos ingresar los rangos de valores UVR que tendrán los servicios en la facturación y aplicar los valores en los campos “Mat.quirúrgicos” y “Derechos de sala”. Al guardar el registro, será posible agregar más elementos.
+• Lateralidad Al dar clic en “Modificar Lateralidad” se mostrarán dos opciones de campos “1 órgano” y “2 órgano”.
+• Cálculo de combinaciones QX Al dar clic en “Modificar Cálculo de combinaciones QX” se habilitaran los campos para agregar valores en los recuadros de las combinaciones. Al guardar el registro, será posible agregar más elementos.
+
+UVR-paq • UVR Paquetizada Al dar clic en “Modificar UVR Paquetizada” se mostrarán los campos “Factor económico” el cual debe ingresarse un valor, al marcar las opciones en la sección “Honorarios especialistas” y “Valores sala, materiales e insumos” se habilitarán los campos para ingresar valores. Como último paso seleccionamos una opción en el campo de lista desplegable “Formato de liquidación” o marcamos la opción “Liquidación por valor” e inhabilitará el campo anterior.
+• Lateralidad Al dar clic en “Modificar Lateralidad” se mostrarán dos opciones de campos “1 órgano” y “2 órgano”.
+
+• Cálculo de combinaciones QX Al dar clic en “Modificar Cálculo de combinaciones QX” se habilitaran los campos para agregar valores en los recuadros de las combinaciones. Al guardar el registro, será posible agregar más elementos.
+Paquete • Honorarios y Valor sala, materiales Al dar clic en “Modificar Honorarios y valor sala, materiales” se mostrará un campo de lista desplegable “Formato de liquidación” con dos opciones “Valor” y “Porcentaje”. Al seleccionar la opción “Porcentaje” se mostrarán los campos de las secciones “Honorarios especialistas” y “Valores sala, materiales e insumos” donde solo se habilitarán los campos marcados.
+Al seleccionar la opción “Valor” este será el único campo en ser diligenciado.
+
+• Lateralidad Al dar clic en “Modificar Lateralidad” se mostrarán dos opciones de campos “1 órgano” y “2 órgano”.
+• Cálculo de combinaciones QX Al dar clic en “Modificar Cálculo de combinaciones QX” se habilitaran los campos para agregar valores en los recuadros de las combinaciones. Al guardar el registro, será posible agregar más elementos.
+Grupo Cálculo de combinaciones QX Al dar clic en “Modificar Cálculo de combinaciones QX” se habilitaran los campos para agregar valores en los recuadros de las combinaciones. Al guardar el registro, será posible agregar más elementos.
+• Grupo (se mostrará el grupo por el cual se está filtrando)
+
+Se visualizan dos secciones “ “Honorarios especialistas” y “Valores sala, materiales e insumos” donde solo se habilitarán los campos marcados.
+• Lateralidad Al dar clic en “Modificar Lateralidad” se mostrarán dos opciones de campos “1 órgano” y “2 órgano”.
+• Cálculo de combinaciones QX Al dar clic en “Modificar Cálculo de combinaciones QX” se habilitaran los campos para agregar valores en los recuadros de las combinaciones. Al guardar el registro, será posible agregar más elementos.
+
+Una vez creado se visualizará en estado “Habilitado”. 4. Se debe crear un manual tarifario que corresponda al código exclusivo
+previamente creado (3) para habilitar la dispensación de medicamentos. Marcando el respectivo check Dispensación MED.
+6.13. Asignación de servicios
+1. En el apartado “Asignación de servicios” se listarán las asignaciones.
+2. Al dar clic en “Nueva asignación”, se debe seleccionar en la lista desplegable “Manuales”, se procede a asignar servicios en la pestaña “Sin configuración” en caso de no listarse ningún servicio se debe marcar la opción “Mostrar servicios sin marcar”, seleccionamos los servicios listados y desmarcamos la opción anterior.
+
+3. El siguiente paso es registrar los valores en el campo de la columna valor total.
+4. En la pestaña “Con configuración” buscamos los servicios a relacionar marcando la opción “Mostrar servicios sin marcar”, seleccionamos los requeridos y procedemos a llenar los campos de valores para las diferentes columnas (cirujano, anestesiólogo, etc).
+Una vez guardado se visualizará en la pantalla principal de asignación.
+6.14. Plan contrato
+1. Al crear el plan contrato para la empresa cliente, es crucial que los datos ingresados coincidan exactamente con los registrados en PROGRAMASTOP. Es importante asegurarse de que el nombre del plan contrato sea exactamente el nombre registrado en PROGRAMASTOP. Esto garantiza el correcto ordenamiento y dispensación de los eventos a partir de PROGRAMASTOP.
+
+2. En el apartado “Plan contrato” se listarán las empresas clientes anteriormente creadas con una opción para poder desplegar y visualizar detalles del contrato.
+3. En la parte derecha donde se lista la empresa se visualiza una opción para crear el plan contrato.
+4. Al ingresar a la opción encontramos diferentes secciones con campos obligatorios para la creación de un plan contrato. Cliente empresa Se visualizarán campos obligatorios como: • Tipo de empresa (ARL, EPS) • Población Información general Se deben llenar los campos obligatorios como: • Nombre del contrato • No. Contrato
+
+• Tipo de contrato Al seleccionar en la lista desplegable las opciones “Capita y evento” deben registrar el campo:
+• Régimen Al seleccionar en la lista desplegable la opción “Libre” deben registrarse los campos:
+• No. Factura • Día de cobro mes
+Como ultimo paso seleccionar la sede • Sede
+Obligatoriamente para el ordenamiento y dispensación se debe marcar la opción del check Habilitar dispensación, para los ordenamientos y dispensación a partir de un evento de Programastop. Este check habilitará, una sección de campos de medicamentos relacionados. Donde debe seleccionar el manual tarifario previamente creado para la dispensación 4.
+
+Facturación de contrato Deben registrarse los siguientes campos obligatorios:
+• Periodo contrato • Valor contrato • Moneda contrato • Fecha de inicio • Fecha de vencimiento • Alerta vencimiento por tiempo • Valor ejecutado • Condición de pago • Vencimiento por porcentaje • C.plan-beneficio • Modalidad pago (opción múltiple) • Tipo de autorización (opción múltiple) • Documentos necesarios (contrato y póliza) • Descripción del contrato • Condiciones de atención a clientes
+
+Servicios relacionados Se debe seleccionar un manual tarifario y relacionar un servicio. Marcando la opción “Mostrar servicios sin marcar”, se listarán los tipos de servicios, luego selecciona un tipo de servicio, se dejará de mostrar debido a que tenemos la opción “Mostrar servicios sin marcar”, marcada. Se debe llenar los campos del tipo de servicio como: valor, %variación, #Acordado y #Mínimopara luego proceder aguardar el plan contrato. Una vez creado se podrá visualizar el valor en la columna No.de contratos, al desplegar la empresa cliente, se podrá ver el detalle de ese plan contrato y su estado “Habilitado”.
+6.15. Cuota moderadora
+1. En el apartado “Cuota moderadora” se visualizarán dos pestañas “Grupos” y “Relación entidad”.
+En la pestaña ”Grupos”, al dar clic en “Crear grupo”, se mostrarán los campos obligatorios para la creación de un grupo. Creado el
+
+grupo se listará en estado “Habilitado”.
+En la pestaña “Relación entidad”, se muestran las entidades relacionadas a un grupo. Al dar clic en “Crear relación entidad” se abrirá una pequeña ventana para relacionar la empresa-cliente anteriormente creada, el grupo anteriormente creado y en el campo “equivalente” agregar una pequeña descripción.
+
+7. Parametrización del módulo asistencial
+7.1. Medicamentos
+1. En el submódulo tm de ordenamiento ingresamos en el apartado “Medicamentos” se mostrarán los medicamentos creados previamente. Al dar clic en “Nuevo medicamento”, se mostrará una nueva pantalla para la creación de un medicamento.
+
+Se registra el código CUM Al registrar el campo anterior (CUM) se habilitará una opción en la parte superior “Relacionar a un artículo activo en compras”
+• Al dar clic se listarán los artículos previamente creados en el módulo administración, submódulo tabla maestra de compra.
+• Se deben marcar los artículos que se relacionarán al medicamento (como recomendación los en los artículos se deben crear los medicamentos previamente).
+La sustancia química. Agregar un nombre comercial. Registrar su forma farmacéutica (tabletas, cápsulas, etc). Agregar el grupo farmacológico.
+
+Registrar el subgrupo fármaco (opcional). Disposición de medicamento en caso de que se requiera para dispensar, uso interno o ambos. Se registra el volumen. Se debe seleccionar la unidad del medicamento (gotas, mg, etc). Seleccione la presentación en la que se encuentra el medicamento. Seleccione la unidad de receta. La cantidad de la unidad de receta. Registrar la concentración del medicamento. Relacionar un diagnóstico para el uso de ese medicamento (se permite añadir más de un diagnóstico).
+
+Relacione los diagnósticos con el medicamento para poder asociarlo a los eventos del paciente que cuenten con un diagnóstico principal.
+Se debe seleccionar la empresa - cliente y el contrato de esa empresa cliente. Como último paso, relacionar un medicamento alternativo.
+Al guardar se mostrará el medicamento previamente creado y su presentación. También es posible cargar medicamentos mediante un archivo Excel.
+
+7.2. Configuración combos de servicios
+1. En el apartado “Configuración combos de servicios” donde se mostrarán los combos previamente creados y al dar clic se expandirá para poder visualizar el detalle.
+2. En la opción “Nuevo combo” desplegará una pequeña ventana para el registro de nuevos combos. Se registra el nombre que tendrá el combo. Seleccionamos el tipo de combo en una lista desplegable (otros, cirugía y lentes, consulta, estudios y procedimiento no QX). Se listarán los servicios relacionados al tipo de combo anteriormente seleccionado.
+
+Debe registrarse los tiempos de espera. Una vez registrado el servicio y su tiempo de espera, debe agregarse el icono del símbolo suma. Se podrán añadir varios servicios. Como último paso, se debe agregar una pequeña observación.
+Al crear el combo se visualizará en estado “Habilitado”.
+7.3. Combos de cirugía
+1. Nos dirigimos al submódulo tm de ordenamiento para registrar los combos de cirugía en el apartado “Combos de cirugía” donde se visualizarán los combos creados.
+
+2. Al dar clic en la opción “Nuevo combo”, Se mostrarán los campos para la creación de combos de medicamentos.
+Se debe registrar el nombre del combo.
+En el campo desplegable “Médico” se listarán todos los usuarios con contratos vigentes del “Módulo médicas”.
+Se debe seleccionar el medicamento y se procede a registrar: • Cantidad • Cada • Tiempo • Durante • Período • Vía • Presentación, esta cambiará de acuerdo a la vía de aplicación del medicamento. • Observaciones Una vez llenado los campos del medicamento se agrega. Se podrán añadir los medicamentos que considere para la creación de un combo.
+
+Se registra una pequeña descripción en el campo “Recomendaciones”. Una vez creado el combo, este aparecerá en estado “Habilitado”.
+7.4. Motivos de cancelación de órdenes de medicamentos
+1. Procedemos a parametrizar los motivos de cancelación de órdenes de medicamentos en el submódulo TM de ordenamiento. Se mostrarán los motivos que hayan sido creados.
+2. Al dar clic en “Nuevo motivo”, se mostrará una pequeña ventana para ingresar la descripción por la cual se va a cancelar. Una vez registrado el motivo, se visualizará en estado “Habilitado”.
+7.5. Asignación de sedes
+1. Es fundamental asignar sedes a los usuarios para garantizar que la dispensación de medicamentos se realice de manera correcta y eficiente. Al asignar
+
+una sede a un usuario, este podrá acceder al módulo de dispensación y solo visualizará las sedes asociadas a su sesión. De esta manera, el usuario únicamente podrá dispensar medicamentos a los pacientes provenientes de la sede asignada, asegurando un proceso de dispensación controlado y preciso. 2. En el submódulo TM de admisiones, en la opción asignación de sedes, se listará el personal asociado a las sedes.
+3. Al dar clic en “Nueva asignación”, se debe seleccionar el cargo para listar los usuarios asociados a ese cargo y relacionar las sedes (pueden ser múltiples sedes).
+
+7.6. Impresiones diagnósticas (CIE10)
+1. Procedemos a los registros de las impresiones diagnósticas en el submódulo “TM de historia clínica”, donde se mostrarán las impresiones creadas.
+2. Al dar clic en la opción “Agregar CIE10”, se abrirá una pequeña ventana con los campos para ingresar un código, descripción y el tipo. Una vez creado, se mostrará en estado “Habilitado”.
+
+7.7. Diagnósticos extendidos
+1. Realizado el paso anterior, nos dirigimos al apartado “Diagnósticos extendidos” en el submódulo “TM de historia clínica”.
+2. Al dar clic en la opción “Agregar IDX”, se mostrará una pequeña ventana, donde se debe registrar un código, seleccionar un CIE10 previamente creado y registrar una pequeña descripción en el campo “IDX Ampliado”.
+
+8. Configuración de medicamentos para un ordenamiento a partir de un evento de PROGRAMASTOP
+8.1. Relacionar el artículo a un almacén
+1. En el módulo de administración, ingresamos al submódulo tm de compra en el apartado almacenes.
+
+2. Al ingresar, se mostrarán los almacenes creados. Para registrar un nuevo almacén, haga clic en la opción Nuevo almacén. A continuación, se abrirá una ventana emergente donde deberá ingresar la información correspondiente.
+3. Se registra la información general del almacén, podemos relacionar una o mas sedes a un almacén.
+4. Se deben relacionar los artículos previamente creados 5.11 que se utilizarán en la dispensación, completar los campos de las cantidades del artículo seleccionado y marcar la opción Acepta externos.
+
+5. Se visualizarán los artículos asociados al almacén junto con sus cantidades disponibles. Una vez completado el registro, haga clic en el botón Guardar para finalizar el proceso.
+8.2. Agregar tipos de insumos
+1. En el módulo asistencial, ingresamos en la opción tm de cirugía en el apartado Tipos de insumo.
+
+2. Aquí se mostrarán las familias de inventarios previamente creadas en la pestaña insumos generales, la cual es la que utilizaremos para ordenar y dispensar. Procedemos a dar clic en la opción Nueva familia.
+3. Se abrirá una ventana emergente con un campo desplegable que lista las familias de inventario. Seleccione la familia correspondiente a los artículos creados para la dispensación.
+
+4. Una vez seleccionada la familia de inventario, haga clic en el botón Guardar para finalizar el registro.
+8.3. Añ adir lotes asistenciales
+1. Ingresamos al módulo asistencial, ingresando en el submódulo tm de historia clínica, en el apartado Lotes asistenciales.
+
+2. “La pantalla se mostrará vacía, ya que primero deben seleccionarse los campos desplegables Centros de consumo y Familias de inventario.
+
+3. Procedemos a seleccionar el centro de consumo que se utilizará para dispensación previamente creado y la familia de inventario.
+4. Se visualizarán todos los artículos asociados a la familia de inventario. Al hacer clic en el ícono de flecha del artículo, se abrirá una ventana emergente.
+5. Complete los campos obligatorios del lote y haga clic en el botón Agregar lote. De esta forma, el lote del artículo quedará registrado.
+8.4. Asociar medicamento a un artículo activo
+1. Nos dirigimos al módulo de asistencial, ingresamos al submódulo de tm ordenamiento, en el apartado Medicamentos.
+
+2. Se visualizarán los medicamentos previamente creados. en la sección 7.1. Parametrización del módulo asistencial.
+3. Haga clic en la opción Nuevo medicamento. Se abrirá una ventana con los campos necesarios para registrar un medicamento. Al registrar el código CUM, se habilitará una opción para relacionar el artículo que hemos venido parametrizando para ordenar y dispensar, al medicamento en procesos de registro.
+
+4. Al dar clic en la relación de un artículo activo, se desplegará una pequeña ventana para seleccionar el o los artículo a relacionar con el medicamento. Marcamos un artículo y damos clic en la opción relacionar.
+5. Una vez relacionado, procedemos registrando los campos obligatorios en la creación del medicamento. Tener en cuenta el campo desplegable de la disposición del medicamento, para poder dispensar.
+
+8.5. Parametrización por base de datos
+Finalmente, el equipo de TTN COMPANY será responsable de parametrizar la tabla de logs de dispensación, estableciendo la relación entre los artículos y el almacén correspondiente. Esto se realiza debido a la falta de integración con el sistema de inventario de PROGRAMASTOP.
+8.6. Asignación de medicamentos a un manual tarifario
+1. Ingresamos al módulo de administración, en el submódulo ”Tm de facturación”, en el apartado ”Manual tarifario”. Damos clic en la opción ”Nueva asignació n”.
+2. En el campo ”Manuales”, se listarán todos los manuales creados previamente, debemos seleccionar el manual creado para dispensación de medicamentos. Al seleccionarlo automáticamente vendrá por defecto con el ”Tipo de có digorelacionado.
+
+3. Para asociar los medicamentos al manual marcamos la opción ”Mostrar servicios sin marcar”para visualizar los medicamentos ya que estos no han sido relacionados.
+4. Seleccionamos los medicamentos al manual tarifario de dispensación previamente creado (4). Los medicamentos seleccionados dejaran visualizarse, por lo que se debe desmarcar la opción ”Mostrar servicios sin marcar”.
+5. Procedemos a registrar el campo valor unitario y guardar la asignación.
+8.7. Habilitar dispensación en plan contrato
+1. En el módulo de administración, nos dirigimos al submódulo ”Tm de facturación.eingresamos en el apartado ”Plan contrato”. Ingresamos en la opción para editar los contratos que se utilizarán para la dispensación de medicamentos.
+
+2 2
+
+2. Al ingresar a editar un contrato, se visualizará toda la información registrada de este, nos ubicaremos en la sección ¨Información general aquí deberemos marcar la opción ”Habilitar dispensación”.
+3. Nos habilitará una pestaña llamada ”Medicamentos relacionados”, damos clic y luego seleccionamos el manual tarifario previamente asociado a los medicamentos. No se visualizaran registros, daremos clic en la casilla ”Mostrar medicamentos sin marcar”. Se listarán los medicamentos previamente relacionados al manual.
+4. Seleccionamos los medicamentos que se utilizaran para la dispensación en el contrato, desmarcaremos la opción ”Mostrar medicamentos sin marcar registramos los valores de los medicamentos en el contrato o, en su defecto, en los campos posteriores.
+
+5. Por último, guardamos la edición del contrato.
+
