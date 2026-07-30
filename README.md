@@ -1,133 +1,122 @@
 # TTN Training Core
 
-Backend de la plataforma de capacitación de **Biowel PRO**. Sirve el contenido de
-los módulos de formación y expone un **asistente conectado a OpenAI** que responde
-usando el manual del producto como fuente.
+Backend (Python + FastAPI) de la plataforma de capacitación **Capacita+ / Biowel**. Expone el catálogo por producto/cliente, la generación de **lecciones con IA** desde insumos (PDF/voz/video), **evaluaciones**, **certificados**, **manual de usuario** y un **asistente conectado a OpenAI**. Lo consume el SPA [`ttn-training-spa`](../ttn-training-spa).
 
-Primer módulo implementado: **Módulo 2 · Asistencial** (Bloques 0 a 3:
-introducción/acceso, agendamiento, admisión y atención, ordenamiento). La
-Dispensación se cubrirá en el Módulo 4.
+- **Stack:** Python 3.12 · FastAPI · OpenAI SDK
+- **Persistencia:** SQLite (`data/lessons.db`) para lecciones/catálogo/clientes; `data/users.json` para usuarios y permisos.
 
-- **Stack:** Python + FastAPI + OpenAI SDK
-- **Persistencia:** contenido en archivos (JSON), sin base de datos todavía
-- **Consumidor:** el SPA `ttn-training-spa` (Vite/React)
-
-## Estructura
-
-```
-ttn-training-core/
-├── app/
-│   ├── main.py            # App FastAPI, CORS, health
-│   ├── config.py          # Settings por variables de entorno
-│   ├── schemas.py         # Modelos Pydantic (Module/Block/Lesson, Chat)
-│   ├── content_store.py   # Carga el contenido desde content/*.json
-│   ├── assistant.py       # Integración con OpenAI (manual como fuente)
-│   └── routers/
-│       ├── content.py     # /api/modules, /api/products/{p}/modules/{id}
-│       └── assistant.py   # /api/assistant/chat, /api/assistant/suggestions
-├── content/
-│   └── biowel_asistencial.json   # Temario del módulo (4 bloques, 15 lecciones)
-├── resources/
-│   └── manual_asistencial.txt    # Manual limpio que alimenta al asistente
-├── requirements.txt
-├── .env.example
-└── README.md
-```
+---
 
 ## Puesta en marcha
 
 ```bash
-# 1. Entorno virtual (recomendado)
+# 1. Entorno virtual
 py -3.12 -m venv .venv
-.venv\Scripts\activate        # Windows PowerShell
-# source .venv/bin/activate   # macOS/Linux
+.venv\Scripts\activate          # Windows PowerShell
+# source .venv/bin/activate     # macOS/Linux
 
 # 2. Dependencias
 pip install -r requirements.txt
 
 # 3. Configuración
-copy .env.example .env        # Windows  (cp en macOS/Linux)
+copy .env.example .env          # Windows  (cp en macOS/Linux)
 #   Edita .env y coloca tu OPENAI_API_KEY
 
 # 4. Levantar el servidor
 uvicorn app.main:app --reload --port 8000
 ```
 
-- API: http://localhost:8000
-- Documentación interactiva (Swagger): http://localhost:8000/docs
+- API: **http://localhost:8000**
+- Swagger (docs interactivas): **http://localhost:8000/docs**
 
-> **Seguridad:** la `OPENAI_API_KEY` se lee del entorno (`.env`), nunca se
-> escribe en el código ni se sube al repositorio (`.env` está en `.gitignore`).
-> El asistente corre **en el backend**: el SPA nunca ve la key.
+> La `OPENAI_API_KEY` se lee del entorno (`.env`); nunca se escribe en el código ni se sube al repo. El asistente y la generación corren en el backend: el SPA nunca ve la key.
 
-## Endpoints
+### Variables de entorno principales (`.env`)
 
-| Método | Ruta | Descripción |
-|--------|------|-------------|
-| GET | `/api/health` | Estado del servicio y si el asistente está configurado |
-| GET | `/api/modules?product=biowel` | Lista de módulos (resumen) |
-| GET | `/api/products/{product}/modules/{module_id}` | Detalle del módulo con bloques y lecciones |
-| GET | `/api/assistant/suggestions` | Preguntas sugeridas para el chat |
-| POST | `/api/assistant/chat` | Pregunta del alumno → respuesta de OpenAI |
-| POST | `/api/auth/login` | Login con usuario/contraseña → token + usuario |
-| GET | `/api/auth/me` | Usuario actual (requiere token Bearer) |
-| GET | `/api/users` | Lista de usuarios (solo admin) |
-| PATCH | `/api/users/{id}/modules` | (Des)bloquear un módulo para un usuario (solo admin) |
+| Variable | Por defecto | Descripción |
+|----------|-------------|-------------|
+| `OPENAI_API_KEY` | *(vacío)* | Habilita asistente, generación de lecciones, evaluación y manual. Sin ella devuelven 503. |
+| `ADMIN_DEFAULT_PASSWORD` | `admin1234` | Contraseña inicial del usuario `admin` al sembrar `users.json`. |
+| `AUTH_SECRET` | `dev-insecure-secret-cambiame` | Secreto para firmar el token de sesión. **Cambiar en producción.** |
+| `CORS_ORIGINS` | `http://localhost:5173` | Orígenes del SPA permitidos. |
+| `QUIZ_PASSING_SCORE` | `80` | % mínimo para aprobar la evaluación y certificar. |
 
-## Autenticación y roles
+> Opcional para procesar insumos: **poppler** (`pdftotext`) para PDF y **ffmpeg** para transcribir voz/video.
 
-- Usuarios, roles y módulos desbloqueados se guardan en `data/users.json`
-  (se siembra solo la primera vez; el archivo está en `.gitignore`).
-- Contraseñas hasheadas con PBKDF2 (nunca en texto plano). Token de sesión
-  firmado con HMAC (`AUTH_SECRET`), enviado como `Authorization: Bearer <token>`.
-- Dos roles: **admin** (acceso a todos los módulos + gestión de usuarios) y
-  **usuario** (todos los módulos bloqueados salvo los que el admin le desbloquee).
+---
 
-**Usuarios demo sembrados (CAMBIAR estas contraseñas):**
+## Iniciar sesión
+
+Autenticación por usuario/contraseña. El flujo:
+
+1. `POST /api/auth/login` con `{ "username": "...", "password": "..." }`.
+2. Devuelve `{ token, user }`. El SPA guarda el token y lo envía como `Authorization: Bearer <token>` en cada petición.
+3. `GET /api/auth/me` devuelve el usuario actual a partir del token.
+
+Ejemplo:
+
+```bash
+curl -X POST http://localhost:8000/api/auth/login \
+  -H "Content-Type: application/json" \
+  -d '{"username":"admin","password":"admin1234"}'
+```
+
+- Contraseñas hasheadas con **PBKDF2** (nunca en texto plano).
+- Token firmado con **HMAC** (`AUTH_SECRET`).
+
+### Usuarios sembrados (demo — CAMBIAR)
+
+Se crean automáticamente la **primera vez** que arranca el backend, en `data/users.json`:
 
 | Usuario | Contraseña | Rol |
 |---------|-----------|-----|
-| `admin` | `admin1234` (o `ADMIN_DEFAULT_PASSWORD`) | admin |
+| `admin` | `admin1234` (o `ADMIN_DEFAULT_PASSWORD`) | **admin** |
 | `ana` | `ana1234` | usuario |
 | `carlos` | `carlos1234` | usuario |
 
-Para regenerar los usuarios demo, borra `data/users.json` y reinicia el backend.
+Para **regenerarlos**, borra `data/users.json` y reinicia el backend.
 
+### Roles
 
-Ejemplo de `POST /api/assistant/chat`:
+- **admin:** acceso a **todos** los módulos + gestión de usuarios, clientes, módulos y lecciones (crear evaluación, certificado y manual).
+- **usuario:** nace con **todos los módulos bloqueados**; el admin habilita cada módulo por usuario (`PATCH /api/users/{id}/modules`).
 
-```json
-{
-  "message": "¿Cómo creo una agenda para un médico?",
-  "context": "Lección: Configuración de agendas del médico",
-  "history": []
-}
+---
+
+## Endpoints principales
+
+| Método | Ruta | Descripción |
+|--------|------|-------------|
+| POST | `/api/auth/login` | Login → token + usuario |
+| GET | `/api/auth/me` | Usuario actual (Bearer) |
+| GET | `/api/users` · POST · PATCH · DELETE | Gestión de usuarios (admin) |
+| PATCH | `/api/users/{id}/modules` | (Des)bloquear un módulo a un usuario (admin) |
+| GET | `/api/catalog?clientId=` | Catálogo con estado (acceso/progreso) del usuario |
+| GET/POST/PATCH/DELETE | `/api/clients` · `/api/admin/clients` | Clientes de cada producto |
+| GET/POST/PATCH/DELETE | `/api/admin/catalog` | Módulos del catálogo (admin) |
+| POST | `/api/admin/lessons/generate` | Genera lecciones con IA desde insumos (admin) |
+| POST | `/api/admin/lessons/{id}/quiz` | Genera la evaluación (admin) |
+| POST | `/api/admin/lessons/{id}/manual` | Genera el manual de usuario estructurado (admin) |
+| GET | `/api/published/modules/{id}/quiz` | Evaluación del módulo (alumno) |
+| GET | `/api/published/modules/{id}/manual` | Manual del módulo (alumno con acceso) |
+
+Lista completa en **`/docs`**.
+
+---
+
+## Estructura
+
 ```
-
-Respuesta:
-
-```json
-{ "reply": "Para crear una agenda...", "model": "gpt-4o" }
+app/
+├── main.py               # App FastAPI, CORS, routers
+├── config.py             # Settings por variables de entorno (.env)
+├── schemas.py            # Modelos Pydantic
+├── auth.py               # Hash de contraseñas + firma de token
+├── user_store.py         # Usuarios y permisos (data/users.json)
+├── db.py                 # SQLite: esquema + migraciones
+├── catalog.py / catalog_store.py / client_store.py / lessons_store.py
+├── lesson_generator.py · quiz_generator.py · manual_generator.py · ingest.py
+└── routers/              # auth, users, content, assistant, catalog, lessons
+content/   · temario base sembrado
+data/      · users.json + lessons.db + uploads (en .gitignore)
 ```
-
-Si no hay `OPENAI_API_KEY`, `/api/assistant/chat` responde **503** (el resto de
-endpoints de contenido funcionan igual).
-
-## Conexión con el SPA (siguiente paso)
-
-El SPA (`ttn-training-spa`) hoy tiene el contenido quemado en
-`src/data/products.ts` y `src/pages/Modulo.tsx`, y el asistente simulado en
-`src/components/Assistant.tsx`. Para consumir este backend:
-
-1. Definir `VITE_API_URL=http://localhost:8000` en el `.env` del SPA.
-2. Reemplazar el contenido de `Modulo.tsx` por un `fetch` a
-   `GET /api/products/biowel/modules/2` y renderizar los bloques/lecciones.
-3. En `Assistant.tsx`, sustituir `pickReply()` por un `POST /api/assistant/chat`
-   enviando `message`, el `context` actual y el `history`.
-
-## Contenido
-
-El temario vive en `content/biowel_asistencial.json` y se valida contra los
-modelos Pydantic de `app/schemas.py` al cargarse. Para editar o ampliar el
-contenido basta con modificar ese archivo (o agregar nuevos módulos y
-registrarlos en `app/content_store.py`).
