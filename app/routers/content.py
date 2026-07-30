@@ -1,10 +1,17 @@
 """Endpoints de contenido de los módulos de capacitación."""
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, Depends, HTTPException
 
-from .. import content_store
-from ..schemas import Module, ModuleSummary
+from .. import catalog, content_store
+from ..deps import current_user
+from ..schemas import CatalogModule, Module, ModuleSummary
 
 router = APIRouter(prefix="/api", tags=["content"])
+
+
+@router.get("/catalog", response_model=list[CatalogModule])
+def get_catalog(clientId: int | None = None, user: dict = Depends(current_user)) -> list[CatalogModule]:
+    """Catálogo de módulos con estado para el usuario. Filtra por cliente si se indica."""
+    return catalog.build_catalog(user, client_id=clientId)
 
 
 @router.get("/modules", response_model=list[ModuleSummary])

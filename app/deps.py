@@ -15,6 +15,7 @@ def to_public(user: dict) -> UserPublic:
         role=user["role"],
         unlockedModules=user.get("unlockedModules", []),
         progress=user.get("progress", {}),
+        certifications=user.get("certifications", {}),
     )
 
 

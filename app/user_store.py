@@ -139,6 +139,22 @@ def set_progress(user_id: str, module_id: int, completed: list[str]) -> dict | N
         return None
 
 
+def set_certification(user_id: str, module_id: int, data_entry: dict) -> dict | None:
+    """Registra la certificación de un módulo para un usuario (mejor puntaje)."""
+    with _lock:
+        data = _load()
+        for user in data["users"]:
+            if user["id"] == user_id:
+                certs = user.setdefault("certifications", {})
+                prev = certs.get(str(module_id))
+                # Conserva el mejor puntaje.
+                if not prev or data_entry.get("score", 0) >= prev.get("score", 0):
+                    certs[str(module_id)] = data_entry
+                _save(data)
+                return user
+        return None
+
+
 def set_module_access(user_id: str, module_id: int, unlocked: bool) -> dict | None:
     """Desbloquea (o bloquea) un módulo para un usuario. Devuelve el usuario o None."""
     with _lock:

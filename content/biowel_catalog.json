@@ -1,0 +1,33 @@
+{
+  "product": "biowel",
+  "modules": [
+    {
+      "id": 1,
+      "code": "MÓDULO 1",
+      "title": "Administración",
+      "description": "Configuración institucional, parametrización y maestros.",
+      "lessonCount": 0
+    },
+    {
+      "id": 2,
+      "code": "MÓDULO 2",
+      "title": "Asistencial",
+      "description": "Agendamiento de citas, admisión, atención al paciente (HCE) y ordenamiento clínico.",
+      "lessonCount": 15
+    },
+    {
+      "id": 3,
+      "code": "MÓDULO 3",
+      "title": "Cuentas Médicas",
+      "description": "Facturación, conciliación y radicación de cuentas.",
+      "lessonCount": 0
+    },
+    {
+      "id": 4,
+      "code": "MÓDULO 4",
+      "title": "Dispensación",
+      "description": "Gestión farmacéutica, dispensación y control de inventario clínico.",
+      "lessonCount": 6
+    }
+  ]
+}
